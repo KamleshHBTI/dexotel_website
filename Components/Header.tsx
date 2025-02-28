@@ -8,7 +8,6 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    
     <div className="outer-container shadow-sm">
       <div className="container">
         <header className="px-0 py-2  text-[#2b7360]">
