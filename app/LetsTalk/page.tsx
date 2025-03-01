@@ -1,118 +1,3 @@
-// "use client";
-// import React, { useState, ChangeEvent, FormEvent } from "react";
-// import { Mail, Phone, MapPin, Send } from "lucide-react";
-
-
-// const LetsTalk = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     message: "",
-//   });
-
-//   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     console.log("Form submitted:", formData);
-//   };
-
-//   return (
-//     <div className="flex items-center justify-center px-6 py-8">
-//       <div className="w-full rounded-lg p-8">
-//         <h1 className="text-3xl font-bold text-[#2b7360] text-center">Let us Talk</h1>
-//         <p className="text-gray-600 text-center mt-2">
-//           Fill out the form below, and we will get back to you as soon as possible.
-//         </p>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-
-          
-//           <div className="space-y-4">
-//             <div className="contactHeading">
-//               <h2 className="text-2xl font-bold gap-2">Kickstart your journey with Dexotel.</h2>
-//               <p>Whether you create software products or leverage technology for business solutions, Dexotel can help drive and accelerate your success.</p>
-//             </div>
-//             <div className="flex items-center space-x-3">
-//               <MapPin className="text-[#2b7360]" />
-//               <p className="text-gray-700">123 Business St Road, Gurgoan, India</p>
-//             </div>
-
-//             <div className="flex items-center space-x-3">
-//               <Mail className="text-[#2b7360]" />
-//               <p className="text-gray-700">contact@dexotel.com</p>
-//             </div>
-
-//             <div className="flex items-center space-x-3">
-//               <Phone className="text-[#2b7360]" />
-//               <p className="text-gray-700">+91 9542491764</p>
-//             </div>
-
-//             <div className="mt-6 flex space-x-4">
-//               <a href="#" className="text-[#2b7360] hover:underline">LinkedIn</a>
-//               <a href="#" className="text-[#2b7360] hover:underline">Twitter</a>
-//               <a href="#" className="text-[#2b7360] hover:underline">Facebook</a>
-//             </div>
-//           </div>
-
-
-//           <form onSubmit={handleSubmit} className="space-y-4">
-//             <div>
-//               <label className="block text-sm font-medium text-gray-700">Full Name</label>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 value={formData.name}
-//                 onChange={handleChange}
-//                 className="mt-1 w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2b7360]"
-//                 required
-//               />
-//             </div>
-
-//             <div>
-//               <label className="block text-sm font-medium text-gray-700">Email</label>
-//               <input
-//                 type="email"
-//                 name="email"
-//                 value={formData.email}
-//                 onChange={handleChange}
-//                 className="mt-1 w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2b7360]"
-//                 required
-//               />
-//             </div>
-
-//             <div>
-//               <label className="block text-sm font-medium text-gray-700">Message</label>
-//               <textarea
-//                 name="message"
-//                 value={formData.message}
-//                 onChange={handleChange}
-//                 rows={4}
-//                 className="mt-1 w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2b7360]"
-//                 required
-//               ></textarea>
-//             </div>
-
-//             <button
-//               type="submit"
-//               className="w-full flex items-center justify-center bg-[#2b7360] text-white py-3 rounded-lg hover:bg-[#235d50] transition"
-//             >
-//               Send Message <Send className="ml-2" size={18} />
-//             </button>
-//           </form>
-
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default LetsTalk;
-
-
-
 'use client';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
@@ -138,6 +23,24 @@ const LetsTalk = () => {
   return (
     <div className="outer-container shadow-top">
         <div className="container py-16">
+        <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="w-full px-4">
+            <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+              <span className="mb-2 block text-lg font-semibold text-primary">
+                Dexotel
+              </span>
+              <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] dark:text-white">
+                Contact Us
+              </h2>
+              <p className="text-base text-body-color dark:text-dark-6">
+                Have questions or need assistance? Our team is here to help!  
+                Reach out to us for inquiries, support, or collaboration opportunities.  
+                We’d love to hear from you.
+              </p>
+            </div>
+          </div>
+        </div>
+
           <div className="flex flex-col md:flex-row mx-auto">
             {/* Left Side - Text & Contact Info */}
             <div className="md:w-1/2 pr-8">
@@ -166,6 +69,9 @@ const LetsTalk = () => {
 
                {/* Social Media Icons */}
                 <div className="mt-4 flex space-x-4">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition duration-300">
+                    <Instagram className="w-6 h-6 text-gray-700 hover:scale-110" />
+                  </a>
                   <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition duration-300">
                     <Linkedin className="w-6 h-6 text-gray-700 hover:scale-110" />
                   </a>
@@ -175,9 +81,7 @@ const LetsTalk = () => {
                   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition duration-300">
                     <Facebook className="w-6 h-6 text-gray-700 hover:scale-110" />
                   </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition duration-300">
-                    <Instagram className="w-6 h-6 text-gray-700 hover:scale-110" />
-                  </a>
+                  
                 </div>
             </div>
 
@@ -254,6 +158,17 @@ const LetsTalk = () => {
               </form>
             </div>
           </div>
+        </div>
+        <div className="relative w-full h-96 overflow-hidden rounded-lg mb-10">
+          <iframe
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=D-45,Cyber+City,Gurugram,Haryana,India&output=embed"
+          ></iframe>
         </div>
     </div>
   );
