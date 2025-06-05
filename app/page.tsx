@@ -23,7 +23,6 @@ const Page = () => {
       <FocusIndustries />
       <Services />
       <Testimonials />
-      <ContactForm />
     </main>
   );
 };

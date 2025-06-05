@@ -5,15 +5,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { services } from '@/data/services';
 import '@/styles/theme.css';
-// import { 
-//   Smartphone, 
-//   Code, 
-//   Network, 
-//   Lightbulb,
-//   MessageSquare,
-//   GitBranch,
-//   Cloud
-// } from 'lucide-react';
+import SectionTransition from '../ui/SectionTransition';
+
 
 export interface Service {
   id: string;
@@ -25,8 +18,8 @@ export interface Service {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.5 }
   }
@@ -34,6 +27,7 @@ const cardVariants = {
 
 export const ServicesGrid: React.FC = () => {
   return (
+    <SectionTransition>
     <section className="theme-section theme-section-bg">
       <div className="theme-container">
         <div className="text-center mb-12">
@@ -55,7 +49,7 @@ export const ServicesGrid: React.FC = () => {
             >
               <Link href={`/services/${service.slug}`}>
                 <div className="theme-card h-full group">
-                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-[#2b7360]">
+                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-theme">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 group-hover:text-[#2b7360] transition-colors duration-300">
@@ -71,27 +65,28 @@ export const ServicesGrid: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link 
+          <Link
             href="/services"
             className="inline-flex items-center justify-center px-6 py-3 border border-[#2b7360] text-[#2b7360] rounded-lg hover:bg-[#2b7360] hover:text-white transition-all duration-300"
           >
             Our Services
-            <svg 
-              className="w-5 h-5 ml-2" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M9 5l7 7-7 7" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
               />
             </svg>
           </Link>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </SectionTransition>
   );
 }; 

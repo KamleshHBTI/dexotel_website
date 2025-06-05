@@ -81,7 +81,7 @@ const ContactInfo = () => (
 const ContactForm = ({ formData, handleChange, handleSubmit }: any) => (
   <div className="md:w-1/2">
     <div className="bg-white p-8 shadow-lg rounded-lg border border-gray-100">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+      <h3 className="text-2xl font-bold text-theme mb-6">Send us a Message</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -274,9 +274,10 @@ const LetsTalk = () => {
           <span className="mb-2 block text-lg font-semibold text-emerald-600">
             Get in Touch
           </span>
-          <h2 className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl md:text-[48px]">
+          <h2 className="text-4xl font-bold mb-3 text-[#2b7360]">Get in Touch</h2>
+          <h3 className="mb-4 text-3xl font-bold text-theme sm:text-4xl md:text-[48px]">
             Let's Build Your Next Success Story
-          </h2>
+          </h3>
           <p className="text-lg text-gray-600">
             Whether you're looking to enhance your customer communication, streamline operations,
             or explore innovative solutions, our team is here to help you achieve your goals.

@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dexotel Website
 
-## Getting Started
+A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── (routes)/         # Page routes
+│   └── layout.tsx        # Root layout
+├── Components/            # React components
+│   ├── atoms/           # Atomic design components
+│   ├── molecules/       # Composite components
+│   └── organisms/       # Complex components
+├── data/                 # Data layer
+│   └── repositories/    # API repositories
+├── store/               # State management
+│   └── useStore.ts     # Zustand store
+├── styles/              # Global styles
+│   └── theme.ts        # Theme configuration
+└── types/              # TypeScript types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project follows a comprehensive design system with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Typography scale
+- Color palette
+- Spacing system
+- Component variants
+- Responsive breakpoints
 
-## Learn More
+## Development Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
-## Deploy on Vercel
+4. Start production server:
+   ```bash
+   npm start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Code Quality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project uses several tools to maintain code quality:
+
+- ESLint for code linting
+- Prettier for code formatting
+- Husky for Git hooks
+- TypeScript for type safety
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+
+## Architecture
+
+### Component Architecture
+
+- Atomic Design methodology
+- Container/Presentational pattern
+- Composition over inheritance
+
+### State Management
+
+- UI state: React Context
+- Application state: Zustand
+- Server state: React Query/SWR
+
+### Data Layer
+
+- Repository pattern for API calls
+- Type-safe API responses
+- Error handling middleware
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Run tests and linting
+4. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

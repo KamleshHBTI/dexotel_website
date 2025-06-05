@@ -33,7 +33,7 @@ const Services = () => {
   return (
     <SectionTransition>
       <div className="theme-container">
-        <motion.h1 
+        <motion.h1
           className="theme-heading text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,25 +42,25 @@ const Services = () => {
           Our Services
           <div className="w-24 h-1 bg-theme mx-auto mt-4 rounded-full" />
         </motion.h1>
-
-        <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {services.map((service) => (
-            <motion.div key={service.id} variants={itemVariants}>
-              <Link 
+         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white p-6 rounded-lg shadow-lg border-2 border-[#2b7360]/20 hover:border-[#2b7360] transition-colors"
+            >
+              <Link
                 href={`/Services/${service.slug}`}
-                className="theme-card group block hover:bg-theme-50 overflow-hidden"
+                className="group block hover:bg-theme-50 overflow-hidden"
               >
                 <div className="mb-4 text-theme-500 transform group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h2 className="theme-subheading group-hover:text-theme transition-colors duration-300">
-                  {service.title}
-                </h2>
+                <h3 className="text-xl font-bold mb-3 text-[#2b7360]">{service.title}</h3>
                 <p className="theme-text">
                   {service.description}
                 </p>
@@ -73,7 +73,7 @@ const Services = () => {
               </Link>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </SectionTransition>
   )

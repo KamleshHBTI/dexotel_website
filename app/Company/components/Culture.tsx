@@ -25,24 +25,30 @@ const culturePoints = [
 
 const Culture = () => {
   return (
-    <section className="py-20">
+    <section className="py-20  bg-[#2b7360]/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Our Culture</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#2b7360]">Our Culture</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We believe in creating an environment where people love to work and grow together.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {culturePoints.map((point, index) => (
-            <div 
+            <motion.div
               key={index}
-              className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white p-6 rounded-lg shadow-lg border-2 border-theme/20 hover:border-theme transition-colors"
             >
-              <h3 className="text-xl font-bold mb-3 text-blue-600">{point.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#2b7360]">{point.title}</h3>
               <p className="text-gray-600">{point.description}</p>
-            </div>
+            </motion.div>
+
           ))}
         </div>
       </div>
