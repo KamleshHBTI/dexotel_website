@@ -1,13 +1,25 @@
-import React from 'react'
+"use client";
 
-const company = () => {
+import React from 'react'
+import Hero from './components/Hero'
+import Achievements from './components/Achievements'
+import Culture from './components/Culture'
+import Team from './components/Team'
+import Timeline from './components/Timeline'
+import Values from './components/Values'
+
+const Company = () => {
+
   return (
-    <>
-      <div>
-          <h1 className="text-center text-2xl font-bold">Company Page</h1>
-      </div>
-    </>
+    <main className="min-h-screen">
+      <Hero/>
+      <Achievements />
+      <Culture />
+      <Team />
+      <Timeline />
+      <Values />
+    </main>
   )
 }
 
-export default company
+export default Company

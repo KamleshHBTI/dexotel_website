@@ -32,13 +32,15 @@ const ServicePage: React.FC<ServicePageProps> = async ({ params }) => {
   return (
     <>
       <ServiceDetails service={service} />
-      <section className="py-16 bg-black">
+      <section className="py-16 bg-theme-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+            <h2 className="text-3xl font-bold mb-12 text-center text-theme">
               Get Started with {service.title}
             </h2>
-            <ContactForm />
+            <div className="theme-card bg-white">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

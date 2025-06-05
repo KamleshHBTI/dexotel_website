@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { services } from '@/data/services';
+import '@/styles/theme.css';
 // import { 
 //   Smartphone, 
 //   Code, 
@@ -33,11 +34,11 @@ const cardVariants = {
 
 export const ServicesGrid: React.FC = () => {
   return (
-    <section className="py-16 bg-black text-white">
-      <div className="container mx-auto px-4">
+    <section className="theme-section theme-section-bg">
+      <div className="theme-container">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <h2 className="theme-title">Our Services</h2>
+          <p className="theme-subtitle">
             Empowering businesses with cutting-edge technology solutions to drive growth and innovation
           </p>
         </div>
@@ -53,14 +54,14 @@ export const ServicesGrid: React.FC = () => {
               custom={index}
             >
               <Link href={`/services/${service.slug}`}>
-                <div className="bg-[#1a1a1a] p-6 rounded-lg h-full border border-gray-800 hover:border-[#2b7360] transition-all duration-300 cursor-pointer group">
-                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="theme-card h-full group">
+                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300 text-[#2b7360]">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 group-hover:text-[#2b7360] transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-600">
                     {service.description}
                   </p>
                 </div>
