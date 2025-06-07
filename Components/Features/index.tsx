@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Features.module.css';
+import SectionTransition from '../ui/SectionTransition';
 
 const features = [
   {
@@ -62,7 +63,9 @@ const Features = () => {
   });
 
   return (
-    <section className={styles.features}>
+    <SectionTransition>
+    <section className="theme-section theme-section-bg">
+      <div className="theme-container">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}
@@ -70,8 +73,8 @@ const Features = () => {
         transition={{ duration: 0.6 }}
         className={styles.featuresHeader}
       >
-        <h2 className={styles.featuresTitle}>Powerful Features for Modern Business</h2>
-        <p className={styles.featuresSubtitle}>
+        <h2 className="theme-heading">Powerful Features for Modern Business</h2>
+        <p className="theme-subtitle text-theme-500 mb-12">
           Everything you need to streamline your communications and delight your customers
         </p>
       </motion.div>
@@ -79,9 +82,11 @@ const Features = () => {
       <div className={styles.featureGrid}>
         {features.map((feature, index) => (
           <FeatureCard key={feature.title} feature={feature} index={index} />
-        ))}
+          ))}
+        </div>
       </div>
     </section>
+    </SectionTransition>
   );
 };
 

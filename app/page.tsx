@@ -1,11 +1,12 @@
 "use client";
-import { useEffect } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import FocusIndustries from "@/Components/Services/FocusIndustries";
 import Services from "./Services/page";
-import ContactForm from "@/Components/ContactForm";
 import HeroSection from "@/Components/HeroSection";
 import Features from "@/Components/Features";
 import Testimonials from "@/Components/Testimonials";
+import { ContactFormData, ContactFormErrors } from './LetsTalk/types';
+import LetsTalk from './LetsTalk/page';
 
 const Page = () => {
   // Add smooth scroll behavior
@@ -16,13 +17,14 @@ const Page = () => {
     };
   }, []);
 
-  return (
+    return (
     <main className="min-h-screen">
       <HeroSection />
       <Features />
       <FocusIndustries />
-      <Services />
+      <Services/>
       <Testimonials />
+      <LetsTalk />
     </main>
   );
 };

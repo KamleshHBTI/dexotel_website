@@ -1,16 +1,67 @@
 "use client";
 
-import React from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Service } from '@/Components/Services/ServicesGrid';
-import ContactForm from '@/Components/ContactForm';
+import { ContactFormData, ContactFormErrors } from '@/app/LetsTalk/types';
+import ContactForm from '@/app/LetsTalk/components/ContactForm';
 
 interface ServiceContentProps {
   service: Service;
 }
 
 export default function ServiceContent({ service }: ServiceContentProps) {
-  const processSteps = [
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: ContactFormErrors = {};
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    }
+
+    // Phone validation
+    if (!formData.phone.trim()) { 
+      newErrors.phone = 'Phone number is required';
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';  
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle form changes  
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      // TODO: Add form submission logic here
+    }
+  };
+
+    const processSteps = [ 
     {
       title: 'Discovery & Planning',
       description: 'We begin with a thorough analysis of your requirements and create a detailed project roadmap.'
@@ -190,7 +241,7 @@ export default function ServiceContent({ service }: ServiceContentProps) {
             <h2 className="text-3xl font-bold mb-12 text-center">
               Get Started with {service.title}
             </h2>
-            <ContactForm />
+            <ContactForm formData={formData} errors={errors} handleChange={handleChange} handleSubmit={handleSubmit} />
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Testimonials.module.css';
+import SectionTransition from '../ui/SectionTransition';
 
 const testimonials = [
   {
@@ -46,10 +47,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section className={styles.testimonials}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Trusted by Industry Leaders</h2>
-        <p className={styles.subtitle}>See what our customers have to say about their experience</p>
+    <section className="theme-section theme-section-bg">
+      <div className="theme-container text-center">
+        <h2 className="theme-heading text-theme">Trusted by Industry Leaders</h2>
+        <p className="theme-subtitle text-theme-500 mb-12">See what our customers have to say about their experience</p>
       </div>
 
       <div className={styles.carousel}>
@@ -121,9 +122,9 @@ const Testimonials = () => {
         <div className={styles.indicator}>
           <span className={styles.metric}>24/7</span>
           <span className={styles.label}>Support</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

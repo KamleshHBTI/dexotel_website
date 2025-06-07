@@ -3,7 +3,7 @@
 import React from 'react';
 import { Service } from '@/Components/Services/ServicesGrid';
 import { services } from '@/data/services';
-import ContactForm from '@/Components/ContactForm';
+import ContactForm from '@/app/Components/ContactForm';
 import ServiceDetails from '@/Components/Services/ServiceDetails';
 import { Metadata } from 'next';
 

@@ -55,11 +55,10 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ name, icon }) => {
 
 const FocusIndustries = () => {
   return (
-    <section className="theme-section theme-section-bg">
-      <div className="theme-container">
-        <div className="text-center mb-12">
-          <h2 className="theme-title">Industries We Serve</h2>
-          <p className="theme-subtitle">
+      <div className="theme-container text-center">
+        <div className="text-center">
+          <h2 className="theme-heading">Industries We Serve</h2>
+          <p className="theme-subtitle text-theme-500 mb-12">
             Delivering specialized solutions across diverse sectors
           </p>
         </div>
@@ -77,7 +76,6 @@ const FocusIndustries = () => {
           ))}
         </div>
       </div>
-    </section>
   );
 };
 

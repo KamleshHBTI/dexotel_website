@@ -35,20 +35,26 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
         <motion.div
           key={industry.id}
           variants={item}
-          className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+          className="theme-card hover-lift group"
         >
           <div className="flex items-center mb-4">
-            <div className="relative w-12 h-12 mr-4">
+            <div className="relative w-16 h-16 mr-4 p-2 bg-theme-50 rounded-lg group-hover:bg-theme-100 transition-colors duration-300">
               <Image
-                src={industry.icon}
+                src={`/images/industries/${industry.icon}`}
                 alt={industry.name}
                 fill
-                className="object-contain"
+                className="object-contain p-2"
               />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900">{industry.name}</h3>
+            <h3 className="theme-subheading">{industry.name}</h3>
           </div>
-          <p className="text-gray-600">{industry.description}</p>
+          <p className="theme-text">{industry.description}</p>
+          <div className="mt-4 flex items-center text-theme font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Learn more
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
         </motion.div>
       ))}
     </motion.div>
