@@ -1,121 +1,134 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import FeaturedHero from './FeaturedHero/FeaturedHero';
+import DiscoveryBar from './Discovery/DiscoveryBar';
+import ArticleGrid from './ArticleGrid/ArticleGrid';
+import EngagementSection from './Engagement/EngagementSection';
+import { BlogPost, TopicChip, SearchResult } from './types';
+import { motion } from 'framer-motion';
+
+// Mock data - Replace with actual API calls
+const mockTopics: TopicChip[] = [
+  { id: '1', name: 'Technology', slug: 'technology' },
+  { id: '2', name: 'Business', slug: 'business' },
+  { id: '3', name: 'Marketing', slug: 'marketing' },
+  { id: '4', name: 'Development', slug: 'development' },
+  { id: '5', name: 'Design', slug: 'design' },
+];
+
+const mockTrendingTags = [
+  'AI',
+  'Machine Learning',
+  'Cloud Computing',
+  'Digital Transformation',
+  'Customer Experience',
+];
 
 const BlogSection: React.FC = () => {
-  return (
-    <section className="bg-white-0 pb-10 pt-20 lg:pb-20 lg:pt-[50px] dark:bg-dark">
-      <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap justify-center">
-          <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Our Blogs
-              </span>
-              <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] dark:text-white">
-                Our Recent News
-              </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
+  const [isLoading, setIsLoading] = useState(true);
+  const [articles, setArticles] = useState<BlogPost[]>([]);
+  const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
+  const [recommendedPosts, setRecommendedPosts] = useState<BlogPost[]>([]);
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div className="mb-10 w-full">
-              <div className="mb-8 overflow-hidden rounded">
-                <Image
-                  src="/images/blogs/blog-01/image-01.jpg"
-                  alt="image"
-                  className="w-full"
-                  width={500}
-                  height={300}
-                />
-              </div>
-              <div>
-                <span className="mb-3 inline-block rounded bg-primary px-0 py-1 text-center text-xs font-semibold leading-loose">
-                  Dec 22, 2023
-                </span>
-                <h3>
-                  <a
-                    href="#"
-                    className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
-                  >
-                    Meet AutoManage, the best AI management tools
-                  </a>
-                </h3>
-                <p className="text-base text-body-color dark:text-dark-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div className="mb-10 w-full">
-              <div className="mb-8 overflow-hidden rounded">
-                <Image
-                  src="/images/blogs/blog-01/image-02.jpg"
-                  alt="image"
-                  className="w-full"
-                  width={500}
-                  height={300}
-                />
-              </div>
-              <div>
-                <span className="mb-3 inline-block rounded bg-primary px-0 py-1 text-center text-xs font-semibold leading-loose">
-                  Mar 15, 2023
-                </span>
-                <h3>
-                  <a
-                    href="#"
-                    className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
-                  >
-                    How to earn more money as a wellness coach
-                  </a>
-                </h3>
-                <p className="text-base text-body-color dark:text-dark-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div className="mb-10 w-full">
-              <div className="mb-8 overflow-hidden rounded">
-                <Image
-                  src="/images/blogs/blog-01/image-03.jpg"
-                  alt="image"
-                  className="w-full"
-                  width={500}
-                  height={300}
-                />
-              </div>
-              <div>
-                <span className="mb-3 inline-block rounded bg-primary px-0 py-1 text-center text-xs font-semibold leading-loose">
-                  Jan 05, 2023
-                </span>
-                <h3>
-                  <a
-                    href="#"
-                    className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
-                  >
-                    The no-fuss guide to upselling and cross selling
-                  </a>
-                </h3>
-                <p className="text-base text-body-color dark:text-dark-6">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-              </div>
-            </div>
-          </div>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Replace with actual API calls
+        // const response = await fetch('/api/articles');
+        // const data = await response.json();
+        
+        // Mock data for demonstration
+        const mockData: BlogPost[] = Array(10).fill(null).map((_, index) => ({
+          id: `${index + 1}`,
+          title: `Sample Article ${index + 1}`,
+          slug: `sample-article-${index + 1}`,
+          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          content: '',
+          featuredImage: {
+            url: `https://source.unsplash.com/random/800x600?tech&sig=${index}`,
+            alt: 'Article image',
+            width: 800,
+            height: 600,
+          },
+          category: {
+            name: mockTopics[index % mockTopics.length].name,
+            slug: mockTopics[index % mockTopics.length].slug,
+          },
+          author: {
+            name: 'John Doe',
+            avatar: 'https://source.unsplash.com/random/100x100?portrait',
+          },
+          readingTime: Math.floor(Math.random() * 10) + 5,
+          publishedAt: new Date().toISOString(),
+          tags: mockTrendingTags.slice(0, 3),
+        }));
+
+        setArticles(mockData);
+        setFeaturedPosts(mockData.slice(0, 3));
+        setRecommendedPosts(mockData.slice(3, 6));
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleSearch = async (query: string): Promise<SearchResult[]> => {
+    // Replace with actual search API call
+    // const response = await fetch(`/api/search?q=${query}`);
+    // return response.json();
+
+    // Mock search results
+    return articles
+      .filter((article) =>
+        article.title.toLowerCase().includes(query.toLowerCase())
+      )
+      .map((article) => ({
+        id: article.id,
+        title: article.title,
+        slug: article.slug,
+        type: 'post',
+      }));
+  };
+
+  const handleSubscribe = async (email: string): Promise<void> => {
+    // Replace with actual subscription API call
+    // await fetch('/api/subscribe', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ email }),
+    // });
+
+    // Mock subscription
+    await new Promise<void>((resolve) => setTimeout(resolve, 1000));
+  };
+
+  return (
+    <div className="space-y-12">
+      <FeaturedHero featuredPosts={featuredPosts} />
+      <DiscoveryBar
+        topics={mockTopics}
+        trendingTags={mockTrendingTags}
+        onSearch={handleSearch}
+      />
+      <div className="bg-gray-50/50">
+        <div className="container mx-auto px-4 py-12">
+          <motion.div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <ArticleGrid articles={articles} isLoading={isLoading} />
+          </motion.div>
         </div>
       </div>
-    </section>
+      <EngagementSection
+        recommendedPosts={recommendedPosts}
+        onSubscribe={handleSubscribe}
+      />
+    </div>
   );
 };
 

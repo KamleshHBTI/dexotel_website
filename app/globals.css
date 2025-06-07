@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import './styles/animations.css';
 
 /* Smooth Scrolling */
 html {
@@ -43,4 +43,91 @@ body {
 .container {
     width: 90%;
     margin: auto;
+}
+
+/* Theme-specific styles */
+.theme-section {
+  @apply py-16 md:py-24;
+}
+
+.theme-container {
+  @apply container mx-auto px-4 md:px-6;
+}
+
+.theme-heading {
+  @apply text-3xl md:text-4xl font-bold text-theme-600 mb-6;
+}
+
+.theme-subheading {
+  @apply text-xl md:text-2xl text-theme-500 mb-4;
+}
+
+.theme-text {
+  @apply text-gray-600 leading-relaxed;
+}
+
+.theme-card {
+  @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.theme-button {
+  @apply bg-theme hover:bg-theme-dark text-white font-semibold py-2 px-6 rounded-lg 
+         transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1;
+}
+
+.theme-link {
+  @apply text-theme hover:text-theme-dark transition-colors duration-300 
+         relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 
+         after:bg-theme after:transform after:scale-x-0 hover:after:scale-x-100 
+         after:transition-transform after:duration-300;
+}
+
+.theme-input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-theme 
+         focus:border-transparent outline-none transition-all duration-300;
+}
+
+.theme-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+/* Animation utilities */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-grow {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Section transitions */
+.section-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Green overlay utility */
+.green-overlay {
+  @apply relative;
+}
+
+.green-overlay::before {
+  content: '';
+  @apply absolute inset-0 bg-theme bg-opacity-40 z-10;
+}
+
+/* Timeline styles */
+.timeline-dot {
+  @apply w-4 h-4 rounded-full bg-theme;
+  box-shadow: 0 0 0 4px theme('colors.theme.100');
+}
+
+.timeline-line {
+  @apply absolute h-full w-0.5 bg-theme bg-opacity-20 left-2 -z-10;
 }

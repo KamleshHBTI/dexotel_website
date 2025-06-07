@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "antd";
-import { ArrowUpOutlined } from "@ant-design/icons";
+import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import "./footer.css";
 
 const FooterBottom = () => {
@@ -10,11 +9,7 @@ const FooterBottom = () => {
   // Show button when scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -28,22 +23,16 @@ const FooterBottom = () => {
 
   return (
     <>
-      <Row justify="center" className="footer-container">
-        <Col xs={24} sm={24} md={24} lg={24}>
-          <div className="footer_copyright">
-            <p className="lft-sd">
-              Copyright © {new Date().getFullYear()} | All Rights Reserved by Dexotel Solution Pvt. Ltd.
-            </p>
-          </div>
-        </Col>
-      </Row>
+      <div className="footer_copyright text-gray text-center py-4">
+        <p className="text-sm">Copyright © {new Date().getFullYear()} | All Rights Reserved by : Dexotel Solution Pvt. Ltd.</p>
+      </div>
 
       {/* Back to Top Button */}
       {isVisible && (
         <button
-          className="back-to-top"
-          onClick={scrollToTop}>
-          <ArrowUpOutlined />
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-custom-blue text-white p-3 rounded-full shadow-md hover:bg-blue-700 transition">
+          <ArrowUpIcon className="w-5 h-5" />
         </button>
       )}
     </>

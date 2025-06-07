@@ -1,13 +1,20 @@
-import React from 'react'
+'use client';
 
-const partners = () => {
+import React from 'react';
+import PartnerHero from './components/PartnerHero/PartnerHero';
+import PartnerTiers from './components/PartnerTiers/PartnerTiers';
+import FeaturedPartners from './components/FeaturedPartners/FeaturedPartners';
+import PartnershipJourney from './components/PartnershipJourney/PartnershipJourney';
+
+const Partners = () => {
   return (
-    <>
-      <div>
-          <h1 className="text-center text-2xl font-bold">Partners Page</h1>
-      </div>
-    </>
-  )
-}
+    <main>
+      <PartnerHero />
+      <PartnerTiers />
+      <FeaturedPartners />
+      <PartnershipJourney />
+    </main>
+  );
+};
 
-export default partners
+export default Partners;

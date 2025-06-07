@@ -1,13 +1,19 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import HeroSection from './components/HeroSection';
+import BenefitsSection from './components/BenefitsSection';
+import OpenPositions from './components/OpenPositions';
+import EmployeeSpotlight from './components/EmployeeSpotlight';
 
-const career = () => {
+const Career = () => {
   return (
-    <>
-      <div>
-          <h1 className="text-center text-2xl font-bold">Career Page</h1>
-      </div>
-    </>
-  )
-}
+    <main className="min-h-screen">
+      <HeroSection />
+      <BenefitsSection />
+      <OpenPositions />
+      <EmployeeSpotlight />
+    </main>
+  );
+};
 
-export default career
+export default Career;
