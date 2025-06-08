@@ -63,7 +63,6 @@ const Features = () => {
   });
 
   return (
-    <SectionTransition>
     <section className="theme-section theme-section-bg">
       <div className="theme-container">
       <motion.div
@@ -86,7 +85,6 @@ const Features = () => {
         </div>
       </div>
     </section>
-    </SectionTransition>
   );
 };
 

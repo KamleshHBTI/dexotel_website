@@ -50,7 +50,7 @@ const Testimonials = () => {
     <section className="theme-section theme-section-bg">
       <div className="theme-container text-center">
         <h2 className="theme-heading text-theme">Trusted by Industry Leaders</h2>
-        <p className="theme-subtitle text-theme-500 mb-12">See what our customers have to say about their experience</p>
+        <p className="theme-subtitle text-theme-500">See what our customers have to say about their experience</p>
       </div>
 
       <div className={styles.carousel}>

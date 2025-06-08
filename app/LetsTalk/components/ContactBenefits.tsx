@@ -25,12 +25,16 @@ const benefits = [
 ];
 
 const partners = [
-  '/logos/partner1.png',
-  '/logos/partner2.png',
-  '/logos/partner3.png',
-  '/logos/partner4.png',
-  '/logos/partner5.png',
-  '/logos/partner6.png',
+  '/images/partners/application.svg',
+  '/images/partners/finserv.svg',
+  '/images/partners/gold-tier.svg',
+  '/images/partners/growth.svg',
+  '/images/partners/healthcare.svg', 
+  '/images/partners/integration.svg',
+  '/images/partners/onboarding.svg',
+  '/images/partners/platinum-tier.svg',
+  '/images/partners/silver-tier.svg',
+  '/images/partners/techcorp.svg',
 ];
 
 const ContactBenefits = () => {

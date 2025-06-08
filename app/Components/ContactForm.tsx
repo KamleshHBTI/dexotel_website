@@ -125,8 +125,8 @@ const ContactForm: React.FC = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-2 bg-[#1a1a1a] border ${
-              errors.name ? 'border-red-500' : 'border-gray-700'
+            className={`w-full px-4 py-2 bg-[#FFFFFF] border-2 ${
+              errors.name ? 'border-red-500' : 'border-theme-700'
             } rounded-lg focus:outline-none focus:border-[#2b7360]`}
           />
           {errors.name && (
@@ -144,8 +144,8 @@ const ContactForm: React.FC = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-2 bg-[#1a1a1a] border ${
-              errors.email ? 'border-red-500' : 'border-gray-700'
+            className={`w-full px-4 py-2 bg-[#FFFFFF] border-2 ${
+              errors.email ? 'border-red-500' : 'border-theme-700'
             } rounded-lg focus:outline-none focus:border-[#2b7360]`}
           />
           {errors.email && (
@@ -163,7 +163,7 @@ const ContactForm: React.FC = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#2b7360]"
+            className="w-full px-4 py-2 bg-[#FFFFFF] border-2 border-theme-700 rounded-lg focus:outline-none focus:border-[#2b7360]"
           />
         </div>
 
@@ -177,7 +177,7 @@ const ContactForm: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 bg-[#1a1a1a] border border-gray-700 rounded-lg focus:outline-none focus:border-[#2b7360]"
+            className="w-full px-4 py-2 bg-[#FFFFFF] border-2 border-theme-700 rounded-lg focus:outline-none focus:border-[#2b7360]"
           />
         </div>
       </div>
@@ -192,8 +192,8 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           rows={4}
-          className={`w-full px-4 py-2 bg-[#1a1a1a] border ${
-            errors.message ? 'border-red-500' : 'border-gray-700'
+          className={`w-full px-4 py-2 bg-[#FFFFFF] border-2 ${
+            errors.message ? 'border-red-500' : 'border-theme-700'
           } rounded-lg focus:outline-none focus:border-[#2b7360]`}
         />
         {errors.message && (

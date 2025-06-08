@@ -4,8 +4,6 @@ import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { services } from '@/data/services'
-import SectionTransition from '@/Components/ui/SectionTransition'
-import GreenOverlay from '@/Components/ui/GreenOverlay'
 
 const Services = () => {
   const containerVariants = {
@@ -31,7 +29,7 @@ const Services = () => {
   };
 
   return (
-    <SectionTransition>
+    <section className="theme-section theme-section-bg">  
       <div className="theme-container">
         <motion.h1
           className="theme-heading text-center"
@@ -75,7 +73,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </SectionTransition>
+    </section>
   )
 }
 

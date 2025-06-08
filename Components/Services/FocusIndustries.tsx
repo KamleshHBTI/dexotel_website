@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ArrowRight, Database, Heart, ShoppingBag, Zap, Plane, Signal, Car } from "lucide-react";
+import { ArrowRight, Database, Heart, ShoppingBag, Zap, Plane, Signal, Car, GraduationCap, Banknote, ShoppingCart, Truck, Home, Hotel, Shield, Factory } from "lucide-react";
 import { motion } from 'framer-motion';
 
 // Define types for industries
@@ -17,6 +17,14 @@ const industries: Industry[] = [
   { name: "Travel", icon: "Plane" },
   { name: "Telecom", icon: "Signal" },
   { name: "Automotive", icon: "Car" },
+  { name: "Education", icon: "GraduationCap" },
+  { name: "Fintech", icon: "Banknote" },
+  { name: "E-commerce", icon: "ShoppingCart" },
+  { name: "Logistics", icon: "Truck" },
+  { name: "Real Estate", icon: "Home" },
+  { name: "Hospitality", icon: "Hotel" },
+  { name: "Insurance", icon: "Shield" },
+  { name: "Manufacturing", icon: "Factory" }
 ];
 
 const iconMapping = {
@@ -27,6 +35,14 @@ const iconMapping = {
   Plane,
   Signal,
   Car,
+  GraduationCap,
+  Banknote,
+  ShoppingCart,
+  Truck,
+  Home,
+  Hotel,
+  Shield,
+  Factory
 };
 
 interface IndustryCardProps {
