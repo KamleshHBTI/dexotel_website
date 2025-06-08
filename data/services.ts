@@ -6,7 +6,8 @@ import {
   Lightbulb,
   MessageSquare,
   GitBranch,
-  Cloud
+  Cloud,
+  CloudUpload
 } from 'lucide-react';
 import { Service } from '@/Components/Services/ServicesGrid';
 
@@ -59,5 +60,12 @@ export const services: Service[] = [
     description: 'We manage your cloud infrastructure end-to-end, ensuring it is optimized, secure, and cost-effective; allowing you to focus on strategic business activities.',
     icon: React.createElement(Cloud, { className: "w-8 h-8 text-[#2b7360]" }),
     slug: 'cloud-managed-services'
+  },
+  {
+    id: "8",
+    title: "Salesforce Services",
+    description: "We offer comprehensive Salesforce solutions including implementation, customization, integration, and support—empowering your business to maximize CRM potential and drive growth.",
+    icon: React.createElement(CloudUpload, { className: 'w-8 h-8 text-[#2b7360]' }),
+    slug: "salesforce-services"
   }
 ]; 

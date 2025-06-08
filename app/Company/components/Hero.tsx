@@ -23,7 +23,7 @@ const Hero = () => {
           >
             Building the Future of Communication
             <motion.div 
-              className="absolute bottom-0 left-0 w-full h-1 bg-white"
+              className="absolute bottom-10 left-0 w-full h-1 bg-white"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ delay: 0.5, duration: 1 }}

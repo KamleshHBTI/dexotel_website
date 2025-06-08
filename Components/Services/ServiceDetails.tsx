@@ -98,7 +98,10 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
                 className="bg-black p-4 rounded-lg text-center"
                 variants={fadeInUp}
               >
-                {tool}
+                <div className="flex items-center space-x-2">
+                  {tool.icon && <tool.icon/>}
+                  <span className="font-semibold text-lg group-hover:text-[#2b7360] transition-colors">{tool.name}</span>
+                </div>
               </motion.div>
             ))}
           </motion.div>

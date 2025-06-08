@@ -31,25 +31,20 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
       viewport={{ once: true }}
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
     >
-      {industries.map((industry) => (
-        <motion.div
-          key={industry.id}
-          variants={item}
-          className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-        >
-          <div className="flex items-center mb-4">
-            <div className="relative w-12 h-12 mr-4">
-              <Image
-                src={industry.icon}
-                alt={industry.name}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900">{industry.name}</h3>
-          </div>
-          <p className="text-gray-600">{industry.description}</p>
-        </motion.div>
+      {industries.map((industry, index) => (
+        <motion.div 
+              key={industry.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white p-6 rounded-lg shadow-lg border-2 border-[#2b7360]/20 hover:border-[#2b7360] transition-colors"
+            >
+              <div className="text-4xl mb-4">{industry.icon && <industry.icon className="text-[#2b7360] text-2xl" />}</div>
+              <h3 className="text-xl font-bold mb-3 text-[#2b7360]">{industry.name}</h3>
+              <p className="text-gray-600">{industry.description}</p>
+            </motion.div>
       ))}
     </motion.div>
   );
