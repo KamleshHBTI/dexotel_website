@@ -1,9 +1,13 @@
 'use client';
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { services } from '@/data/services'
+import ContactSection from '@/Components/Contact/ContactSection';
+import Header from '../LetsTalk/components/Header';
+import ContactForm from '../LetsTalk/components/ContactForm';
+import ContactBenefits from '../LetsTalk/components/ContactBenefits';
 
 const Services = () => {
   const containerVariants = {
@@ -28,6 +32,29 @@ const Services = () => {
     }
   };
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    phone: ''
+  });
+
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+
   return (
     <section className="theme-section theme-section-bg">  
       <div className="theme-container">
@@ -40,7 +67,7 @@ const Services = () => {
           Our Services
           <div className="w-24 h-1 bg-theme mx-auto mt-4 rounded-full" />
         </motion.h1>
-         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -72,6 +99,16 @@ const Services = () => {
             </motion.div>
           ))}
         </div>
+        <div className="flex flex-col md:flex-row gap-12 mb-16">
+          <ContactBenefits />
+          <ContactForm 
+            formData={formData} 
+            errors={errors}
+            handleChange={handleChange} 
+            handleSubmit={handleSubmit} 
+          />
+        </div>
+        <ContactSection />
       </div>
     </section>
   )

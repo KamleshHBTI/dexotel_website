@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Section from '@/Components/DesignSystem/Section';
-import Typography from '@/Components/DesignSystem/Typography';
+import Section from '@/Components/DesignSystem/Section';  
 import IndustryCarousel from '@/app/Components/Industries/IndustryCarousel';
 import IndustryGrid from '@/app/Components/Industries/IndustryGrid';
 import TestimonialCard from '@/app/Components/Industries/TestimonialCard';
@@ -40,12 +39,12 @@ const Industries = () => {
       <Section background="white" spacing="lg">
         <div className="theme-container">
           <div className="text-center mb-12">
-            <Typography variant="h2" className="theme-heading" animate>
+            <h2 className="theme-heading">
               We Serve Industries across the Globe
-            </Typography>
-            <Typography variant="body1" className="theme-text mt-4" animate>
+            </h2>
+            <p className="theme-text mt-4">
               Delivering excellence in communication solutions worldwide
-            </Typography>
+            </p>
           </div>
           <WorldMap regions={regions} />
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">

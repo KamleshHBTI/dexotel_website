@@ -32,8 +32,8 @@ const Team = () => {
     <section className="py-20  bg-[#2b7360]/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Our Leadership Team</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="theme-heading mb-4">Our Leadership Team</h2>
+          <p className="theme-text max-w-2xl mx-auto">
             Meet the people who are driving our vision forward
           </p>
         </div>

@@ -2,8 +2,8 @@ import { ContactFormProps } from '../types';
 
 const ContactForm = ({ formData, errors, handleChange, handleSubmit }: ContactFormProps) => (
   <div className="md:w-1/2">
-    <div className="bg-white p-8 rounded-lg shadow-sm">
-      <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
+    <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-theme hover:border-[#2b7360] transition-colors">
+      <h3 className="text-2xl font-semibold theme-heading mb-6">Send us a Message</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -16,7 +16,7 @@ const ContactForm = ({ formData, errors, handleChange, handleSubmit }: ContactFo
             placeholder="John Doe"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 ${
+            className={`w-full px-4 py-2 border-2 rounded-md focus:border-theme ${
               errors.name ? 'border-red-500' : 'border-gray-300'
             }`}
             required
@@ -37,7 +37,7 @@ const ContactForm = ({ formData, errors, handleChange, handleSubmit }: ContactFo
             placeholder="john@example.com"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 ${
+            className={`w-full px-4 py-2 border-2 rounded-md focus:border-theme ${
               errors.email ? 'border-red-500' : 'border-gray-300'
             }`}
             required
@@ -58,7 +58,7 @@ const ContactForm = ({ formData, errors, handleChange, handleSubmit }: ContactFo
             placeholder="+91 9999999999"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 ${
+            className={`w-full px-4 py-2 border-2 rounded-md focus:border-theme ${
               errors.phone ? 'border-red-500' : 'border-gray-300'
             }`}
             required
@@ -79,7 +79,7 @@ const ContactForm = ({ formData, errors, handleChange, handleSubmit }: ContactFo
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 ${
+            className={`w-full px-4 py-2 border-2 rounded-md focus:border-theme ${
               errors.message ? 'border-red-500' : 'border-gray-300'
             }`}
             required
