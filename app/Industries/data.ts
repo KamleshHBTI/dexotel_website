@@ -48,7 +48,7 @@ export const industries: Industry[] = [
     name: "Healthcare",
     description: "Empower patients and providers with seamless digital touchpoints for appointments, follow-ups, and health management.",
     icon: iconMapping.Heart,
-    heroImage: "/images/industry/healthcare.svg",
+    heroImage: "/images/industry/hero/Healthcare.svg",
     heroSubtitle: "Enhance care delivery at every stage of the patient journey"
   },
   {
@@ -56,7 +56,7 @@ export const industries: Industry[] = [
     name: "Education",
     description: "Foster active learning environments by linking classrooms, campuses, and families for dynamic educational experiences.",
     icon: iconMapping.GraduationCap,
-    heroImage: "/images/industry/education.svg",
+    heroImage: "/images/industry/hero/Education.svg",
     heroSubtitle: "Inspire growth with connected learning solutions"
   },
   {
@@ -64,7 +64,7 @@ export const industries: Industry[] = [
     name: "Fintech",
     description: "Accelerate financial innovation with platforms that streamline banking, payments, and user verification processes.",
     icon: iconMapping.Banknote,
-    heroImage: "/images/industry/fintech.svg",
+    heroImage: "/images/industry/hero/Fintech.svg",
     heroSubtitle: "Build trust and agility in digital finance"
   },
   {
@@ -72,7 +72,7 @@ export const industries: Industry[] = [
     name: "E-commerce",
     description: "Elevate online retail by automating order tracking, customer service, and personalized shopping experiences.",
     icon: iconMapping.ShoppingCart,
-    heroImage: "/images/industry/e-commerce.svg",
+    heroImage: "/images/industry/hero/E-commerce.svg",
     heroSubtitle: "Transform shoppers into loyal brand advocates"
   },
   {
@@ -80,7 +80,7 @@ export const industries: Industry[] = [
     name: "Logistics",
     description: "Optimize fleet management and shipment visibility with solutions for real-time tracking and efficient route planning.",
     icon: iconMapping.Truck,
-    heroImage: "/images/industry/logistics.svg",
+    heroImage: "/images/industry/hero/Logistics.svg",
     heroSubtitle: "Deliver speed and reliability at every mile"
   },
   {
@@ -88,7 +88,7 @@ export const industries: Industry[] = [
     name: "Real Estate",
     description: "Accelerate transactions with engaging tools for property tours, timely updates, and smooth contract processes.",
     icon: iconMapping.Home,
-    heroImage: "/images/industry/real-estate.svg",
+    heroImage: "/images/industry/hero/Real_Estate.svg",
     heroSubtitle: "Empower property deals through smarter interactions"
   },
   {
@@ -96,7 +96,7 @@ export const industries: Industry[] = [
     name: "Hospitality",
     description: "Delight guests with effortless bookings, tailored offers, and personalized support before, during, and after their stay.",
     icon: iconMapping.Hotel,
-    heroImage: "/images/industry/hospitality.svg",
+    heroImage: "/images/industry/hero/Hospitality.svg",
     heroSubtitle: "Make every guest feel at home from reservation to checkout"
   },
   {
@@ -104,7 +104,7 @@ export const industries: Industry[] = [
     name: "Insurance",
     description: "Simplify claims, policy management, and customer support with digital-first workflows that boost efficiency.",
     icon: iconMapping.Shield,
-    heroImage: "/images/industry/insurance.svg",
+    heroImage: "/images/industry/hero/Insurance.svg",
     heroSubtitle: "Make protection and peace of mind truly accessible"
   },
   {
@@ -112,7 +112,7 @@ export const industries: Industry[] = [
     name: "Manufacturing",
     description: "Enhance factory floor productivity with instant updates on inventory, maintenance, and production schedules.",
     icon: iconMapping.Factory,
-    heroImage: "/images/industry/manufacturing.svg",
+    heroImage: "/images/industry/hero/Manufacturing.svg",
     heroSubtitle: "Streamline operations from supply chain to delivery"
   },
   {
@@ -120,7 +120,7 @@ export const industries: Industry[] = [
     name: "Retail",
     description: "Engage shoppers in-store and online with tailored promotions, product launches, and loyalty programs.",
     icon: iconMapping.ShoppingBag,
-    heroImage: "/images/industry/retail.svg",
+    heroImage: "/images/industry/hero/Retail.svg",
     heroSubtitle: "Bring customers closer with memorable retail moments"
   },
   {
@@ -128,7 +128,7 @@ export const industries: Industry[] = [
     name: "Technology",
     description: "Support innovation teams with robust tools for project coordination, product rollouts, and customer support.",
     icon: iconMapping.Signal,
-    heroImage: "/images/industry/technology.svg",
+    heroImage: "/images/industry/hero/Technology.svg",
     heroSubtitle: "Accelerate digital progress across every touchpoint"
   },
   {
@@ -136,7 +136,7 @@ export const industries: Industry[] = [
     name: "Energy",
     description: "Manage grid health, outage alerts, and field operations with platforms built for speed and reliability.",
     icon: iconMapping.Zap,
-    heroImage: "/images/industry/energy.svg",
+    heroImage: "/images/industry/hero/Energy.svg",
     heroSubtitle: "Power every sector with resilience and transparency"
   },
   {
@@ -144,7 +144,7 @@ export const industries: Industry[] = [
     name: "Travel",
     description: "Guide travelers with real-time booking updates, destination tips, and seamless itinerary management.",
     icon: iconMapping.Plane,
-    heroImage: "/images/industry/travel.svg",
+    heroImage: "/images/industry/hero/Travel.svg",
     heroSubtitle: "Make journeys smoother from takeoff to touchdown"
   },
   {
@@ -152,7 +152,7 @@ export const industries: Industry[] = [
     name: "Telecom",
     description: "Deliver instant account alerts, service information, and feature updates to subscribers at scale.",
     icon: iconMapping.Signal,
-    heroImage: "/images/industry/telecom.svg",
+    heroImage: "/images/industry/hero/Telecom.svg",
     heroSubtitle: "Enable seamless connectivity in a digital world"
   },
   {
@@ -160,7 +160,7 @@ export const industries: Industry[] = [
     name: "Automotive",
     description: "Enhance the road experience with automated service reminders, digital brochures, and buyer support tools.",
     icon: iconMapping.Car,
-    heroImage: "/images/industry/automotive.svg",
+    heroImage: "/images/industry/hero/Automotive.svg",
     heroSubtitle: "Drive customer satisfaction from showroom to service"
   }
 ];

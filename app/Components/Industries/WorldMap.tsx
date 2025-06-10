@@ -12,12 +12,21 @@ interface Region {
 interface WorldMapProps {
   regions: Region[];
 }
+type PaletteKey = "primary" | "secondary" | "tertiary";
+const palette: Record<PaletteKey, string> = { primary: "#f00", secondary: "#0f0", tertiary: "#00f" };
+const myKey: PaletteKey = "tertiary"; // ← should be PaletteKey ideally
+const variantStyles = {
+  primary: 'bg-gradient-to-br from-blue-900 to-indigo-800',
+  secondary: 'bg-gradient-to-br from-purple-900 to-indigo-800',
+  tertiary: 'bg-gradient-to-br from-gray-900 to-slate-800',
+};
 
 const WorldMap: React.FC<WorldMapProps> = ({ regions }) => {
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
 
   return (
-    <div className="relative w-full aspect-[2/1] bg-gray-100 rounded-lg overflow-hidden">
+    <div className={`relative min-h-[80vh] flex items-center justify-center overflow-hidden ${variantStyles[myKey]}`}
+    aria-labelledby="hero-title">
       <div className="absolute inset-0">
         <Image
           src="/images/world-map.svg"

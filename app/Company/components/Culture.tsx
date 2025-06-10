@@ -2,24 +2,32 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { Brain, Clock, Book, Users } from 'lucide-react';
 
 const culturePoints = [
   {
     title: 'Innovation First',
     description: 'We encourage creative thinking and embrace new ideas.',
+    icons: <Brain />,
+    color: 'text-theme',
   },
   {
     title: 'Work-Life Balance',
     description: 'Flexible working hours and remote-friendly environment.',
+    icons: <Clock />,
+    color: 'text-theme',
   },
   {
     title: 'Continuous Learning',
     description: 'Regular workshops, training sessions, and learning opportunities.',
+    icons: <Book />,
+    color: 'text-theme',
   },
   {
     title: 'Inclusive Environment',
     description: 'Diverse perspectives are valued and celebrated.',
+    icons: <Users />,
+    color: 'text-theme',
   },
 ]
 
@@ -45,7 +53,7 @@ const Culture = () => {
               whileHover={{ scale: 1.05 }}
               className="bg-white p-6 rounded-lg shadow-lg border-2 border-theme/20 hover:border-theme transition-colors"
             >
-              <h3 className="text-xl font-bold mb-3 text-[#2b7360]">{point.title}</h3>
+              <h3 className={`text-xl font-bold mb-3 ${point.color}`}>{point.icons} {point.title}</h3>
               <p className="text-gray-600">{point.description}</p>
             </motion.div>
 

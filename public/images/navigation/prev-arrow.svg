@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M31 36L17 24L31 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <animate
+        attributeName="stroke-dasharray"
+        from="0,100"
+        to="100,100"
+        dur="1s"
+        begin="onmouseover"
+        fill="freeze"
+      />
+      <animate
+        attributeName="stroke-dasharray"
+        from="100,100"
+        to="0,100"
+        dur="1s"
+        begin="onmouseout"
+        fill="freeze"
+      />
+    </path>
+    <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" opacity="0.2">
+      <animate
+        attributeName="opacity"
+        values="0.2;0.5;0.2"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </g>
+</svg> 

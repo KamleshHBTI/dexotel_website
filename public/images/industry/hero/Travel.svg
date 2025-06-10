@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <radialGradient id="bg-travel" cx="53%" cy="80%" r="59%">
+     <stop offset="0%" stop-color="#1e88e5" stop-opacity="0.13" />
+     <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+   </radialGradient>
+</defs>
+<ellipse cx="200" cy="250" rx="120" ry="43" fill="url(#bg-travel)" />
+<g>
+<polygon id="plane" points="200,170 210,200 200,190 190,200" fill="#90caf9">
+  <animateTransform attributeName="transform" type="translate" values="0,0;0,-20;0,0" dur="1.4s" repeatCount="indefinite"/>
+</polygon>
+<rect x="197" y="190" width="6" height="40" rx="2" fill="#1976d2"/>
+</g>
+</svg>

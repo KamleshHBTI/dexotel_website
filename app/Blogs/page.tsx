@@ -5,10 +5,20 @@ import { motion } from 'framer-motion';
 import BlogSection from '@/Components/Blogs/BlogSection';
 import SectionTransition from '@/Components/ui/SectionTransition';
 import GreenOverlay from '@/Components/ui/GreenOverlay';
+import HeroSection from "../Components/HeroSection";
+import HeroIllustration from "../Components/HeroIllustration";
 
 const Blogs = () => {
   return (
     <SectionTransition>
+      <HeroSection
+        title="Insights & Updates"
+        subtitle="Stay informed with our latest articles, industry insights, and expert perspectives on communication technology."
+        ctaText="Read Latest"
+        ctaLink="#blog-posts"
+        illustration={<HeroIllustration />}
+        variant="tertiary"
+      />
       <div className="theme-container">
         <motion.h1
           className="theme-heading text-center"

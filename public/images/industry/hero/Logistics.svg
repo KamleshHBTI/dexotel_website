@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <radialGradient id="bg-log" cx="40%" cy="60%" r="50%">
+   <stop offset="0%" stop-color="#ff9800" stop-opacity="0.17" />
+   <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+ </radialGradient>
+</defs>
+<ellipse cx="200" cy="220" rx="150" ry="90" fill="url(#bg-log)" />
+<g>
+  <rect id="truck" x="120" y="190" width="80" height="40" rx="10" fill="#ffd54f" stroke="#ff9800" stroke-width="3">
+    <animateTransform attributeName="transform" type="translate" values="0,0;30,0;0,0" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="200" y="200" width="40" height="30" rx="6" fill="#b0bec5" />
+  <circle cx="140" cy="235" r="13" fill="#424242" />
+  <circle cx="210" cy="235" r="13" fill="#424242" />
+</g>
+</svg>

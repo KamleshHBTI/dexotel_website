@@ -1,0 +1,37 @@
+# !/bin/bash
+
+# Create the directory if it doesn't exist
+DIR="public/images/industry/heroIcons"
+mkdir -p public/images/industry/heroIcons
+
+echo '<svg width="200" height="200"><circle cx="100" cy="100" r="60" fill="#e53935"/><polygon points="100,50 112,70 135,74 120,90 124,115 100,105 76,115 80,90 65,74 88,70" fill="#fff"><animateTransform attributeName="transform" type="scale" values="1;1.07;1" keyTimes="0;0.5;1" dur="2s" repeatCount="indefinite"/></polygon><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Healthcare</text></svg>' > "$DIR/Healthcare.svg"
+
+echo '<svg width="200" height="200"><rect x="45" y="100" width="110" height="20" fill="#fbc02d"/><polygon points="100,40 60,100 140,100" fill="#1976d2"><animate attributeName="points" values="100,40 60,100 140,100;100,50 55,110 145,110;100,40 60,100 140,100" dur="2s" repeatCount="indefinite" /></polygon><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Education</text></svg>' > "$DIR/Education.svg"
+
+echo '<svg width="200" height="200"><rect x="60" y="70" width="80" height="60" rx="15" fill="#4caf50"/><text x="100" y="110" text-anchor="middle" fill="#fff" font-size="40">$</text><circle cx="100" cy="100" r="40" fill="none" stroke="#fff" stroke-width="4"><animate attributeName="stroke-dashoffset" from="0" to="-250" dur="2s" repeatCount="indefinite"/></circle><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Fintech</text></svg>' > "$DIR/Fintech.svg"
+
+echo '<svg width="200" height="200"><rect x="40" y="60" width="120" height="70" fill="#00897b" rx="8"/><rect x="65" y="110" width="70" height="40" fill="#80cbc4" rx="5"/><circle cx="70" cy="155" r="7" fill="#ffb300"/><circle cx="130" cy="155" r="7" fill="#ffb300"/><rect x="95" y="30" width="10" height="30" fill="#00897b"><animateTransform attributeName="transform" type="translate" values="0,0;0,15;0,0" dur="1.5s" repeatCount="indefinite"/></rect><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">E-commerce</text></svg>' > "$DIR/E-commerce.svg"
+
+echo '<svg width="200" height="200"><rect x="40" y="90" width="120" height="45" fill="#ff9800" rx="8"/><circle cx="60" cy="140" r="8" fill="#424242"/><circle cx="140" cy="140" r="8" fill="#424242"/><rect x="120" y="80" width="40" height="25" fill="#ffe0b2" rx="3"/><rect x="50" y="135" width="100" height="10" fill="#757575"><animateTransform attributeName="transform" type="translate" values="0,0;20,0;0,0" dur="2s" repeatCount="indefinite"/></rect><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Logistics</text></svg>' > "$DIR/Logistics.svg"
+
+echo '<svg width="200" height="200"><rect x="60" y="90" width="80" height="60" fill="#1976d2"/><polygon points="50,90 100,40 150,90" fill="#90caf9"/><rect x="90" y="120" width="20" height="30" fill="#fff"><animate attributeName="y" values="120;130;120" dur="2s" repeatCount="indefinite"/></rect><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Real Estate</text></svg>' > "$DIR/Real_Estate.svg"
+
+echo '<svg width="200" height="200"><ellipse cx="100" cy="120" rx="60" ry="30" fill="#ff7043"/><rect x="60" y="70" width="80" height="40" rx="15" fill="#fff"/><rect x="85" y="100" width="30" height="7" fill="#e64a19"><animate attributeName="width" values="30;50;30" dur="2s" repeatCount="indefinite"/></rect><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Hospitality</text></svg>' > "$DIR/Hospitality.svg"
+
+echo '<svg width="200" height="200"><ellipse cx="100" cy="150" rx="70" ry="20" fill="#bdbdbd"/><path d="M60 150 Q100 70 140 150" fill="#42a5f5"/><rect x="90" y="110" width="20" height="40" fill="#1976d2"/><polygon points="60,150 100,90 140,150" fill="none" stroke="#1565c0" stroke-width="3"><animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="2s" repeatCount="indefinite"/></polygon><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Insurance</text></svg>' > "$DIR/Insurance.svg"
+
+echo '<svg width="200" height="200"><circle cx="100" cy="100" r="65" fill="#bdbdbd"/><g><circle cx="100" cy="100" r="40" fill="#757575"/><g><rect x="98" y="45" width="4" height="20" fill="#ffc107"><animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="1.5s" repeatCount="indefinite"/></rect></g></g><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Manufacturing</text></svg>' > "$DIR/Manufacturing.svg"
+
+echo '<svg width="200" height="200"><rect x="40" y="80" width="120" height="60" fill="#43a047"/><rect x="60" y="110" width="80" height="30" fill="#c8e6c9"/><g><rect x="90" y="70" width="20" height="20" fill="#ffeb3b"><animate attributeName="y" values="70;60;70" dur="1.5s" repeatCount="indefinite"/></rect></g><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Retail</text></svg>' > "$DIR/Retail.svg"
+
+echo '<svg width="200" height="200"><rect x="60" y="65" width="80" height="55" rx="10" fill="#3949ab"/><rect x="70" y="85" width="60" height="30" fill="#fff"/><circle cx="100" cy="130" r="5" fill="#ffd600"><animate attributeName="opacity" values="0.1;1;0.1" dur="1.2s" repeatCount="indefinite"/></circle><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Technology</text></svg>' > "$DIR/Technology.svg"
+
+echo '<svg width="200" height="200"><rect x="90" y="70" width="20" height="50" fill="#ffc107"/><polygon points="100,40 110,90 90,90" fill="#ffd600"><animateTransform attributeName="transform" type="scale" values="1;1.1;1" keyTimes="0;0.5;1" dur="2s" repeatCount="indefinite"/></polygon><ellipse cx="100" cy="170" rx="75" ry="12" fill="#ffe082"/><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Energy</text></svg>' > "$DIR/Energy.svg"
+
+echo '<svg width="200" height="200"><ellipse cx="100" cy="140" rx="60" ry="20" fill="#81d4fa"/><path d="M60 140 Q100 60 140 140" fill="#e1f5fe"/><rect x="92" y="90" width="16" height="30" fill="#1e88e5"/><polygon points="100,80 108,70 92,70" fill="#90caf9"><animateTransform attributeName="transform" type="translate" values="0,0;0,-10;0,0" dur="1.2s" repeatCount="indefinite"/></polygon><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Travel</text></svg>' > "$DIR/Travel.svg"
+
+echo '<svg width="200" height="200"><rect x="90" y="60" width="20" height="70" fill="#42a5f5"/><circle cx="100" cy="50" r="9" fill="#1976d2"/><path d="M100,120 Q150,75 100,50" fill="none" stroke="#1976d2" stroke-width="5" stroke-dasharray="7,7"><animate attributeName="stroke-dashoffset" values="0;14;0" dur="2s" repeatCount="indefinite"/></path><text x="100" y="195" text-anchor="middle" fill="#333" font-size="18">Telecom</text></svg>' > "$DIR/Telecom.svg"
+
+echo '<svg width="200" height="200"><circle cx="100" cy="100" r="65" fill="#212121"/><circle cx="100" cy="100" r="55" fill="#fafafa"/><rect x="98" y="30" width="4" height="40" fill="#b0bec5"><animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="1.2s" repeatCount="indefinite"/></rect><text x="100" y="185" text-anchor="middle" fill="#333" font-size="18">Automotive</text></svg>' > "$DIR/Automotive.svg"
+
+echo "SVG files created in $DIR"

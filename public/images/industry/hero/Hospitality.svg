@@ -1,0 +1,18 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <radialGradient id="bg-hosp" cx="60%" cy="30%" r="61%">
+   <stop offset="0%" stop-color="#ff7043" stop-opacity="0.17" />
+   <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+ </radialGradient>
+</defs>
+<ellipse cx="200" cy="210" rx="120" ry="70" fill="url(#bg-hosp)" />
+<g>
+ <ellipse id="bell" cx="200" cy="210" rx="60" ry="28" fill="#ff7043" stroke="#d84315" stroke-width="4">
+   <animateTransform attributeName="transform" type="scale" values="1;1.09;1" dur="1.8s" repeatCount="indefinite" />
+ </ellipse>
+ <rect x="180" y="190" width="40" height="18" rx="6" fill="#fff8e1" />
+ <rect x="193" y="180" width="14" height="14" rx="4" fill="#ffe082">
+   <animate attributeName="y" values="180;170;180" dur="1.8s" repeatCount="indefinite"/>
+ </rect>
+</g>
+</svg>

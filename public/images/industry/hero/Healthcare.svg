@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+   <stop offset="0%" stop-color="#e53935" stop-opacity="0.25" />
+   <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+ </radialGradient>
+</defs>
+<circle cx="200" cy="200" r="150" fill="url(#bg)" />
+<g>
+  <path id="heart" d="M200 275 L150 220 A35 35 0 0 1 200 150 A35 35 0 0 1 250 220 Z" fill="#e53935">
+    <animateTransform attributeName="transform" type="scale" values="1;1.08;1" keyTimes="0;0.5;1" begin="0s" dur="2s" repeatCount="indefinite"/>
+  </path>
+</g>
+</svg>
