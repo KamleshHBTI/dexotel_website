@@ -1,13 +1,27 @@
 import { Service } from '@/Components/Services/ServicesGrid';
+import { 
+  FaReact, FaMobile, FaSwift, FaJava, FaPython, FaNodeJs, FaAngular, FaVuejs,
+  FaAws, FaFigma, FaSketch, FaMicrosoft, FaCloud, FaRobot, FaDatabase, FaChartBar,
+  FaCogs, FaTools, FaProjectDiagram, FaShieldAlt, FaChartLine, FaDocker, FaGithub,
+  FaServer, FaCloudversify, FaGoogle, FaMicrochip, FaCode, FaBolt
+} from 'react-icons/fa';
+import { 
+  SiFlutter, SiKotlin, SiFirebase, SiIonic, SiMongodb, SiPostgresql,
+  SiKubernetes, SiJenkins, SiGitlab, SiTerraform, SiAnsible, SiPrometheus,
+  SiElasticsearch, SiGooglecloud, SiSalesforce
+} from 'react-icons/si';
+import { TbBrandVscode } from 'react-icons/tb';
+import { BsKanbanFill } from 'react-icons/bs';
 
 // Define interfaces for service details
 interface ProcessStep {
   title: string;
   description: string;
 }
+
 interface Tool {
   name: string;
-  icon: string; // This could be a URL, an icon class, or a local asset reference
+  icon: React.ComponentType;
 }
 
 interface FAQ {
@@ -22,19 +36,18 @@ interface ServiceDetails {
   faqs: FAQ[];
 }
 
-
 // Service-specific details
 export const serviceDetails: Record<string, ServiceDetails> = {
   'mobile-app-development': {
     tools: [
-      { name: 'React Native', icon: 'react-native' },
-      { name: 'Flutter', icon: 'flutter' },
-      { name: 'Swift', icon: 'swift' },
-      { name: 'Kotlin', icon: 'kotlin' },
-      { name: 'Firebase', icon: 'firebase' },
-      { name: 'AWS Amplify', icon: 'aws-amplify' },
-      { name: 'App Center', icon: 'app-center' },
-      { name: 'Ionic', icon: 'ionic' }
+      { name: 'React Native', icon: FaReact },
+      { name: 'Flutter', icon: SiFlutter },
+      { name: 'Swift', icon: FaSwift },
+      { name: 'Kotlin', icon: SiKotlin },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'AWS Amplify', icon: FaAws },
+      { name: 'VS Code', icon: TbBrandVscode },
+      { name: 'Ionic', icon: SiIonic }
     ],
     processSteps: [
       {
@@ -80,14 +93,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'software-development': {
     tools: [
-      { name: 'Node.js', icon: 'nodejs' },
-      { name: 'Python', icon: 'python' },
-      { name: 'Java', icon: 'java' },
-      { name: 'React', icon: 'react' },
-      { name: 'Angular', icon: 'angular' },
-      { name: 'Vue.js', icon: 'vuejs' },
-      { name: 'PostgreSQL', icon: 'postgresql' },
-      { name: 'MongoDB', icon: 'mongodb' }
+      { name: 'Node.js', icon: FaNodeJs },
+      { name: 'Python', icon: FaPython },
+      { name: 'Java', icon: FaJava },
+      { name: 'React', icon: FaReact },
+      { name: 'Angular', icon: FaAngular },
+      { name: 'Vue.js', icon: FaVuejs },
+      { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'MongoDB', icon: SiMongodb }
     ],
     processSteps: [
       {
@@ -133,14 +146,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'digital-transformation': {
     tools: [
-      { name: 'Cloud Platforms (AWS/Azure/GCP)', icon: 'cloud-platforms' },
-      { name: 'AI/ML Tools', icon: 'ai-ml-tools' },
-      { name: 'Data Analytics', icon: 'data-analytics' },
-      { name: 'RPA Tools', icon: 'rpa-tools' },
-      { name: 'Integration Platforms', icon: 'integration-platforms' },
-      { name: 'Digital Experience Platforms', icon: 'digital-experience-platforms' },
-      { name: 'IoT Platforms', icon: 'iot-platforms' },
-      { name: 'Blockchain', icon: 'blockchain' }
+      { name: 'Cloud Platforms', icon: FaCloud },
+      { name: 'AI/ML Tools', icon: FaRobot },
+      { name: 'Data Analytics', icon: FaDatabase },
+      { name: 'RPA Tools', icon: FaCogs },
+      { name: 'Integration Platforms', icon: FaTools },
+      { name: 'Digital Experience', icon: FaChartBar },
+      { name: 'IoT Platforms', icon: FaProjectDiagram },
+      { name: 'Blockchain', icon: FaShieldAlt }
     ],
     processSteps: [
       {
@@ -186,14 +199,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'ideation-and-design': {
     tools: [
-      { name: 'Figma', icon: 'figma' },
-      { name: 'Adobe XD', icon: 'adobe-xd' },
-      { name: 'Sketch', icon: 'sketch' },
-      { name: 'InVision', icon: 'invision' },
-      { name: 'Miro', icon: 'miro' },
-      { name: 'UserTesting', icon: 'user-testing' },
-      { name: 'Hotjar', icon: 'hotjar' },
-      { name: 'ProtoPie', icon: 'proto-pie' }
+      { name: 'Figma', icon: FaFigma },
+      { name: 'Adobe XD', icon: FaMicrosoft },
+      { name: 'Sketch', icon: FaSketch },
+      { name: 'InVision', icon: FaProjectDiagram },
+      { name: 'Miro', icon: FaChartBar },
+      { name: 'UserTesting', icon: FaTools },
+      { name: 'Hotjar', icon: FaChartLine },
+      { name: 'ProtoPie', icon: FaCogs }
     ],
     processSteps: [
       {
@@ -239,14 +252,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'it-consulting': {
     tools: [
-      { name: 'Project Management Tools', icon: 'project-management-tools' },
-      { name: 'Business Analysis Tools', icon: 'business-analysis-tools' },
-      { name: 'Enterprise Architecture Frameworks', icon: 'enterprise-architecture-frameworks' },
-      { name: 'Risk Assessment Tools', icon: 'risk-assessment-tools' },
-      { name: 'Process Modeling Tools', icon: 'process-modeling-tools' },
-      { name: 'Performance Monitoring', icon: 'performance-monitoring' },
-      { name: 'Security Assessment Tools', icon: 'security-assessment-tools' },
-      { name: 'Cost Analysis Tools', icon: 'cost-analysis-tools' }
+      { name: 'Project Management', icon: BsKanbanFill },
+      { name: 'Business Analysis', icon: FaChartLine },
+      { name: 'Enterprise Architecture', icon: FaProjectDiagram },
+      { name: 'Risk Assessment', icon: FaShieldAlt },
+      { name: 'Process Modeling', icon: FaCogs },
+      { name: 'Performance Monitoring', icon: FaChartBar },
+      { name: 'Security Assessment', icon: FaShieldAlt },
+      { name: 'Cost Analysis', icon: FaChartLine }
     ],
     processSteps: [
       {
@@ -292,14 +305,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'devops': {
     tools: [
-      { name: 'Docker', icon: 'docker' },
-      { name: 'Kubernetes', icon: 'kubernetes' },
-      { name: 'Jenkins', icon: 'jenkins' },
-      { name: 'GitLab CI/CD', icon: 'gitlab-ci-cd' },
-      { name: 'Terraform', icon: 'terraform' },
-      { name: 'Ansible', icon: 'ansible' },
-      { name: 'Prometheus', icon: 'prometheus' },
-      { name: 'ELK Stack', icon: 'elk-stack' }
+      { name: 'Docker', icon: FaDocker },
+      { name: 'Kubernetes', icon: SiKubernetes },
+      { name: 'Jenkins', icon: SiJenkins },
+      { name: 'GitLab CI/CD', icon: SiGitlab },
+      { name: 'Terraform', icon: SiTerraform },
+      { name: 'Ansible', icon: SiAnsible },
+      { name: 'Prometheus', icon: SiPrometheus },
+      { name: 'ELK Stack', icon: SiElasticsearch }
     ],
     processSteps: [
       {
@@ -345,14 +358,14 @@ export const serviceDetails: Record<string, ServiceDetails> = {
   },
   'cloud-managed-services': {
     tools: [
-      { name: 'AWS', icon: 'aws' },
-      { name: 'Azure', icon: 'azure' },
-      { name: 'Google Cloud', icon: 'google-cloud' },
-      { name: 'Terraform', icon: 'terraform' },
-      { name: 'CloudWatch', icon: 'cloudwatch' },
-      { name: 'Azure Monitor', icon: 'azure-monitor' },
-      { name: 'Kubernetes', icon: 'kubernetes' },
-      { name: 'Cloud Security Tools', icon: 'cloud-security-tools' }
+      { name: 'AWS', icon: FaAws },
+      { name: 'Azure', icon: FaMicrosoft },
+      { name: 'Google Cloud', icon: SiGooglecloud },
+      { name: 'Terraform', icon: SiTerraform },
+      { name: 'CloudWatch', icon: FaCloudversify },
+      { name: 'Azure Monitor', icon: FaMicrochip },
+      { name: 'Kubernetes', icon: SiKubernetes },
+      { name: 'Cloud Security', icon: FaShieldAlt }
     ],
     processSteps: [
       {
@@ -400,84 +413,83 @@ export const serviceDetails: Record<string, ServiceDetails> = {
     ]
   },
   'salesforce-services': {
-  tools: [
-    { name: 'Salesforce', icon: 'salesforce' },
-    { name: 'Salesforce Sales Cloud', icon: 'salesforce-sales-cloud' },
-    { name: 'Salesforce Service Cloud', icon: 'salesforce-service-cloud' },
-    { name: 'Salesforce Marketing Cloud', icon: 'salesforce-marketing-cloud' },
-    { name: 'Salesforce Pardot', icon: 'salesforce-pardot' },
-    { name: 'Salesforce CPQ', icon: 'salesforce-cpq' },
-    { name: 'Apex', icon: 'apex' },
-    { name: 'Salesforce Lightning Web Components', icon: 'salesforce-lightning-web-components' },
-    { name: 'Data Loader', icon: 'data-loader' },
-    { name: 'MuleSoft', icon: 'mule-soft' }
-  ],
-  processSteps: [
-    {
-      title: "Requirement Analysis",
-      description: "Understand your business processes and define CRM objectives."
-    },
-    {
-      title: "Solution Design",
-      "description": "Design tailored Salesforce solutions and integrations."
-    },
-    {
-      title: "Implementation & Customization",
-      description: "Configure, customize, and integrate Salesforce to fit your needs."
-    },
-    {
-      title: "Training & Support",
-      description: "Provide user training, documentation, and ongoing support."
-    },
-    {
-      title: "Ongoing Support & Maintenance",
-      description: "Provide ongoing support, user training, troubleshooting, and regular system health checks to ensure Salesforce continues to power your business efficiently."
-    }
-  ],
-  benefits: [
-    'Streamlined Sales Processes',
-    'Automated Workflows',
-    '360-Degree Customer View',
-    'Enhanced Reporting & Analytics',
-    'Improved Customer Engagement',
-    'Scalable and Customizable Solutions',
-    'Ongoing Support & Maintenance',
-    'Custom Solutions',
-  ],
-  faqs: [
-    {
-      question: "Can you migrate data from our existing CRM to Salesforce?",
-      answer: "Yes, we assist with seamless data migration from your current system to Salesforce, ensuring data accuracy and integrity."
-    },
-    {
-      question: "Do you provide custom app development on Salesforce?",
-      answer: "Absolutely. We offer custom app development using Apex and Lightning components to fully meet your business requirements."
-    },
-    {
-      question: "What kind of support do you offer post-implementation?",
-      answer: "We provide ongoing support, user training, troubleshooting, and regular system health checks to ensure Salesforce continues to power your business efficiently."
-    }, 
-    {
-      question: "Can you help with Salesforce integration with other systems?",
-      answer: "Yes, we offer integration services to connect Salesforce with other systems, including ERP, accounting, and external APIs."
-    },
-    {
-      question: "Do you offer Salesforce training and documentation?",
-      answer: "Yes, we provide comprehensive training and documentation to help your team effectively use Salesforce."
-    },
-    {
-      question: "How do you ensure data security in Salesforce?",
-      answer: "We implement robust security measures including encryption, access controls, and compliance monitoring to protect your data."
-    },
-    {
-      question: "Can you help with Salesforce customization?",
-      answer: "Yes, we offer customization services to tailor Salesforce to your specific business needs."
-    },
-    {
-      question: "Do you offer Salesforce migration services?",
-      answer: "Yes, we assist with seamless data migration from your current system to Salesforce, ensuring data accuracy and integrity."
-    }
-    
-  ]
-}
+    tools: [
+      { name: 'Salesforce', icon: SiSalesforce },
+      { name: 'Sales Cloud', icon: FaChartLine },
+      { name: 'Service Cloud', icon: FaServer },
+      { name: 'Marketing Cloud', icon: FaChartBar },
+      { name: 'Pardot', icon: FaProjectDiagram },
+      { name: 'CPQ', icon: FaCogs },
+      { name: 'Apex', icon: FaCode },
+      { name: 'Lightning Components', icon: FaBolt },
+      { name: 'Data Loader', icon: FaDatabase },
+      { name: 'MuleSoft', icon: FaTools }
+    ],
+    processSteps: [
+      {
+        title: "Requirement Analysis",
+        description: "Understand your business processes and define CRM objectives."
+      },
+      {
+        title: "Solution Design",
+        "description": "Design tailored Salesforce solutions and integrations."
+      },
+      {
+        title: "Implementation & Customization",
+        description: "Configure, customize, and integrate Salesforce to fit your needs."
+      },
+      {
+        title: "Training & Support",
+        description: "Provide user training, documentation, and ongoing support."
+      },
+      {
+        title: "Ongoing Support & Maintenance",
+        description: "Provide ongoing support, user training, troubleshooting, and regular system health checks to ensure Salesforce continues to power your business efficiently."
+      }
+    ],
+    benefits: [
+      'Streamlined Sales Processes',
+      'Automated Workflows',
+      '360-Degree Customer View',
+      'Enhanced Reporting & Analytics',
+      'Improved Customer Engagement',
+      'Scalable and Customizable Solutions',
+      'Ongoing Support & Maintenance',
+      'Custom Solutions',
+    ],
+    faqs: [
+      {
+        question: "Can you migrate data from our existing CRM to Salesforce?",
+        answer: "Yes, we assist with seamless data migration from your current system to Salesforce, ensuring data accuracy and integrity."
+      },
+      {
+        question: "Do you provide custom app development on Salesforce?",
+        answer: "Absolutely. We offer custom app development using Apex and Lightning components to fully meet your business requirements."
+      },
+      {
+        question: "What kind of support do you offer post-implementation?",
+        answer: "We provide ongoing support, user training, troubleshooting, and regular system health checks to ensure Salesforce continues to power your business efficiently."
+      }, 
+      {
+        question: "Can you help with Salesforce integration with other systems?",
+        answer: "Yes, we offer integration services to connect Salesforce with other systems, including ERP, accounting, and external APIs."
+      },
+      {
+        question: "Do you offer Salesforce training and documentation?",
+        answer: "Yes, we provide comprehensive training and documentation to help your team effectively use Salesforce."
+      },
+      {
+        question: "How do you ensure data security in Salesforce?",
+        answer: "We implement robust security measures including encryption, access controls, and compliance monitoring to protect your data."
+      },
+      {
+        question: "Can you help with Salesforce customization?",
+        answer: "Yes, we offer customization services to tailor Salesforce to your specific business needs."
+      },
+      {
+        question: "Do you offer Salesforce migration services?",
+        answer: "Yes, we assist with seamless data migration from your current system to Salesforce, ensuring data accuracy and integrity."
+      }
+    ]
+  }
 }; 

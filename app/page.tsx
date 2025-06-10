@@ -10,6 +10,7 @@ import { ContactFormData, ContactFormErrors } from './LetsTalk/types';
 import ContactBenefits from './LetsTalk/components/ContactBenefits';
 import Header from './LetsTalk/components/Header';
 import { motion } from 'framer-motion';
+import ContactSection from '@/Components/Contact/ContactSection';
 
 
 const Page = () => {
@@ -82,6 +83,9 @@ const Page = () => {
             handleChange={handleChange} 
             handleSubmit={handleSubmit} 
           />
+        </div>
+        <div className="mb-16">
+        <ContactSection />
         </div>
       </div>
     </main>

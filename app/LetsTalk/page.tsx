@@ -9,6 +9,7 @@ import ContactMethods from './components/ContactMethods';
 import Map from './components/Map';
 import FAQ from './components/FAQ';
 import Testimonials from './components/Testimonials';
+import ContactSection from '@/Components/Contact/ContactSection';
 
 const LetsTalk = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -109,12 +110,11 @@ const LetsTalk = () => {
   };
 
   return (
-    <div className="outer-container shadow-top bg-gray-50">
-      <div className="container py-16 px-4 mx-auto max-w-7xl">
+    <div className="outer-container shadow-top bg-theme/6">
+      <div className="container py-16 px-4 mx-auto max-w-7xl mb-12">
         <Header />
 
-        {/* Contact Section */}
-        <div className="flex flex-col md:flex-row gap-12 mb-16">
+        <div className="flex flex-col md:flex-row gap-12 mb-8">
           <ContactBenefits />
           <ContactForm 
             formData={formData} 
@@ -123,10 +123,7 @@ const LetsTalk = () => {
             handleSubmit={handleSubmit} 
           />
         </div>
-
-        <Map />
-        <FAQ />
-        <Testimonials />
+      <ContactSection />
       </div>
     </div>
   );

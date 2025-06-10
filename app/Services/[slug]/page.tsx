@@ -3,7 +3,7 @@
 import React from 'react';
 import { Service } from '@/Components/Services/ServicesGrid';
 import { services } from '@/data/services';
-import ContactForm from '@/app/Components/ContactForm';
+import ContactForm from '@/Components/Contact/ContactSection';
 import ServiceDetails from '@/Components/Services/ServiceDetails';
 import { Metadata } from 'next';
 
@@ -31,7 +31,7 @@ const ServicePage: React.FC<ServicePageProps> = async ({ params }) => {
 
   return (
     <>
-      <ServiceDetails service={service} />
+      <ServiceDetails service={service} services={services} />
       <section className="py-16 bg-theme-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">

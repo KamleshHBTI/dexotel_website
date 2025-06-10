@@ -22,12 +22,14 @@ const Hero = () => {
             className="text-5xl md:text-6xl font-bold mb-6 relative"
           >
             Building the Future of Communication
+            <div>
             <motion.div 
-              className="absolute bottom-10 left-0 w-full h-1 bg-white"
+              className="absolute mb-12 left-0 w-full h-1 bg-white"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ delay: 0.5, duration: 1 }}
             />
+            </div>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
