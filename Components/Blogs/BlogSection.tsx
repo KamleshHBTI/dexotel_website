@@ -113,16 +113,7 @@ const BlogSection: React.FC = () => {
         onSearch={handleSearch}
       />
       <div className="bg-gray-50/50">
-        <div className="container mx-auto px-4 py-12">
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <ArticleGrid articles={articles} isLoading={isLoading} />
-          </motion.div>
-        </div>
+        <ArticleGrid articles={articles} isLoading={isLoading} />
       </div>
       <EngagementSection
         recommendedPosts={recommendedPosts}

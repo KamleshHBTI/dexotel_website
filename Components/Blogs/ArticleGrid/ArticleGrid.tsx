@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPost } from '../types';
-import { useVirtualizer } from '@tanstack/react-virtual';
 
 interface ArticleGridProps {
   articles: BlogPost[];
@@ -86,46 +85,30 @@ const SkeletonCard = () => (
 );
 
 const ArticleGrid: React.FC<ArticleGridProps> = ({ articles, isLoading }) => {
-  const parentRef = React.useRef<HTMLDivElement>(null);
-
-  const rowVirtualizer = useVirtualizer({
-    count: isLoading ? 6 : articles.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => 400,
-    overscan: 5,
-  });
-
   return (
-    <div
-      ref={parentRef}
-      className="container mx-auto px-4 py-8 h-[calc(100vh-200px)] overflow-auto"
-    >
-      <div
-        className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        style={{
-          height: `${rowVirtualizer.getTotalSize()}px`,
-          position: 'relative',
-        }}
-      >
-        {rowVirtualizer.getVirtualItems().map((virtualRow) => (
-          <div
-            key={virtualRow.index}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: virtualRow.size,
-              transform: `translateY(${virtualRow.start}px)`,
-            }}
-          >
-            {isLoading ? (
-              <SkeletonCard />
-            ) : (
-              <ArticleCard post={articles[virtualRow.index]} />
-            )}
-          </div>
-        ))}
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {isLoading
+          ? Array(6).fill(null).map((_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <SkeletonCard />
+              </motion.div>
+            ))
+          : articles.map((article, index) => (
+              <motion.div
+                key={article.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <ArticleCard post={article} />
+              </motion.div>
+            ))}
       </div>
     </div>
   );

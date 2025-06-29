@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Features.module.css';
-import SectionTransition from '../ui/SectionTransition';
 
 const features = [
   {

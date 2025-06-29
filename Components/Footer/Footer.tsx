@@ -9,7 +9,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50">
+    <footer className="bg-black text-white">
       <div className="outer-container shadow-top">
         <div className="container mx-auto py-16 px-4">
           {/* Main Footer Content */}
@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="mb-8">
                 <h3 className="text-xl font-bold mb-4">Dexotel</h3>
                 <p className="text-gray-600 mb-4">
-                  Empowering businesses with seamless payment solutions and innovative financial technology.
+                  Dexotel is a leading software development company that provides a wide range of services to businesses of all sizes.
                 </p>
               </div>
               <div>
@@ -38,7 +38,7 @@ const Footer = () => {
                 {Object.values(MAIN_NAVIGATION).map((section) => (
                   <div key={section.title}>
                     <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-8">
                       {section.links.map((link) => (
                         <li key={link.href}>
                           <Link 

@@ -5,7 +5,7 @@ const SocialLinks = () => {
   return (
     <div className="social-links">
       <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-      <div className="flex space-x-4">
+      <div className="flex flex-col gap-2">
         {SOCIAL_LINKS.map((link) => (
           <a
             key={link.platform}
