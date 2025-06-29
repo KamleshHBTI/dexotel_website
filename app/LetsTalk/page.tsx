@@ -5,10 +5,6 @@ import { ContactFormData, ContactFormErrors } from './types';
 import Header from './components/Header';
 import ContactBenefits from './components/ContactBenefits';
 import ContactForm from './components/ContactForm';
-import ContactMethods from './components/ContactMethods';
-import Map from './components/Map';
-import FAQ from './components/FAQ';
-import Testimonials from './components/Testimonials';
 import ContactSection from '@/Components/Contact/ContactSection';
 
 const LetsTalk = () => {

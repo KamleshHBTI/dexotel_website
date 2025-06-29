@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <radialGradient id="bg-retail" cx="50%" cy="60%" r="55%">
+     <stop offset="0%" stop-color="#43a047" stop-opacity="0.19" />
+     <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+   </radialGradient>
+</defs>
+<ellipse cx="200" cy="210" rx="130" ry="60" fill="url(#bg-retail)" />
+<g>
+  <rect id="tag" x="170" y="175" width="60" height="36" rx="10" fill="#fff59d" stroke="#43a047" stroke-width="4">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-18;0,0" dur="1.7s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="190" cy="193" r="5" fill="#43a047" />
+</g>
+</svg>

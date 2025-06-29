@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <radialGradient id="bg-re" cx="50%" cy="40%" r="50%">
+   <stop offset="0%" stop-color="#1976d2" stop-opacity="0.16" />
+   <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+ </radialGradient>
+</defs>
+<ellipse cx="200" cy="210" rx="130" ry="68" fill="url(#bg-re)" />
+<g>
+ <polygon id="house" points="200,140 125,200 275,200" fill="#fff" stroke="#1976d2" stroke-width="5">
+   <animateTransform attributeName="transform" type="scale" values="1;1.1;1" begin="0s" dur="2s" repeatCount="indefinite"/>
+ </polygon>
+ <rect x="145" y="200" width="110" height="70" fill="#90caf9" stroke="#1976d2" stroke-width="4"/>
+</g>
+</svg>

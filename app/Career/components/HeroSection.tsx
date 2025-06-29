@@ -37,14 +37,14 @@ const HeroSection = () => {
           backgroundPosition: 'center',
         }}
       />
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50" />
       
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-bold text-center mb-6"
+          className="text-4xl md:text-4xl font-bold text-center mb-6 text-[#2b7360]"
         >
           Join Our Mission to Transform Communication
         </motion.h1>
@@ -53,7 +53,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-center mb-12 max-w-3xl"
+          className="text-xl md:text-xl text-center mb-12 max-w-3xl text-white"
         >
           Build the future of customer engagement with a team that's revolutionizing how businesses connect
         </motion.p>
@@ -83,7 +83,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300"
+          className="bg-theme hover:bg-theme-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300"
         >
           Explore Opportunities
         </motion.button>

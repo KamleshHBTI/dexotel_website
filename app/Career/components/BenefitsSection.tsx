@@ -5,32 +5,32 @@ import { FaHeartbeat, FaGraduationCap, FaPlane, FaLaptopCode, FaHandshake, FaCha
 
 const benefits = [
   {
-    icon: <FaHeartbeat className="w-8 h-8" />,
+    icon: <FaHeartbeat className="w-8 h-8 text-theme-600" />,
     title: 'Health & Wellness',
     description: 'Comprehensive medical coverage, mental health support, and wellness programs for you and your family.'
   },
   {
-    icon: <FaGraduationCap className="w-8 h-8" />,
+    icon: <FaGraduationCap className="w-8 h-8 text-theme-600" />,
     title: 'Learning & Development',
     description: 'Continuous learning opportunities with dedicated budget for courses, conferences, and certifications.'
   },
   {
-    icon: <FaPlane className="w-8 h-8" />,
+    icon: <FaPlane className="w-8 h-8 text-theme-600" />,
     title: 'Flexible Time Off',
     description: 'Unlimited PTO policy with work-life balance at its core, including paid sabbaticals.'
   },
   {
-    icon: <FaLaptopCode className="w-8 h-8" />,
+    icon: <FaLaptopCode className="w-8 h-8 text-theme-600" />,
     title: 'Remote Work',
     description: 'Hybrid work culture with state-of-the-art home office setup and flexible schedules.'
   },
   {
-    icon: <FaHandshake className="w-8 h-8" />,
+    icon: <FaHandshake className="w-8 h-8 text-theme-600" />,
     title: 'Equity & Benefits',
     description: 'Competitive compensation with stock options and comprehensive benefits package.'
   },
   {
-    icon: <FaChartLine className="w-8 h-8" />,
+    icon: <FaChartLine className="w-8 h-8 text-theme-600" />,
     title: 'Career Growth',
     description: 'Clear career progression paths with regular performance reviews and mentorship programs.'
   }

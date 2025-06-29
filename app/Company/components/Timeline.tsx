@@ -62,7 +62,7 @@ const Timeline = () => {
                   {/* Content */}
                   <div className="w-1/2 px-8">
                     <div className={`bg-white p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'text-right' : ''}`}>
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{event.year}</div>
+                      <div className="text-2xl font-bold text-theme-600 mb-2">{event.year}</div>
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
                       <p className="text-gray-600">{event.description}</p>
                     </div>

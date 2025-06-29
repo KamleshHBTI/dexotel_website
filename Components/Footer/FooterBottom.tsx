@@ -5,6 +5,7 @@ import "./footer.css";
 
 const FooterBottom = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   // Show button when scrolled down
   useEffect(() => {
@@ -22,9 +23,16 @@ const FooterBottom = () => {
   };
 
   return (
-    <>
-      <div className="footer_copyright text-gray text-center py-4">
-        <p className="text-sm">Copyright © {new Date().getFullYear()} | All Rights Reserved by : Dexotel Solution Pvt. Ltd.</p>
+    <div className="bg-gray-100 py-4">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+          <div>
+            © {currentYear} Dexotel. All rights reserved.
+          </div>
+          <div className="mt-2 md:mt-0">
+            Made with ❤️ in India | ISO 27001 Certified
+          </div>
+        </div>
       </div>
 
       {/* Back to Top Button */}
@@ -35,7 +43,7 @@ const FooterBottom = () => {
           <ArrowUpIcon className="w-5 h-5" />
         </button>
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <radialGradient id="bg-tech" cx="36%" cy="49%" r="65%">
+     <stop offset="0%" stop-color="#3949ab" stop-opacity="0.15" />
+     <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+   </radialGradient>
+</defs>
+<ellipse cx="200" cy="200" rx="142" ry="82" fill="url(#bg-tech)" />
+<g>
+ <rect x="130" y="175" width="140" height="70" rx="16" fill="#fff" stroke="#3949ab" stroke-width="4" />
+ <rect x="160" y="205" width="80" height="30" fill="#e3f2fd" />
+ <rect x="150" y="185" width="100" height="8" fill="#3949ab">
+   <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+ </rect>
+</g>
+</svg>

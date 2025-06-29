@@ -1,21 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1001" width="100%" height="auto">
-  <g fill="#e0e7ef" stroke="#b4bbc5" stroke-width="1">
-    <!-- World map paths (continents & countries) below — simplified for brevity -->
-    <!-- North America -->
-    <path d="M172,183l12,40l-25,29l-3,41l21,8l19,40l39,-19l23,-4l8,26l33,-11l43,12l17,34l41,30l51,15l23,-8l54,-7l35,17l45,-9l42,13l25,-10l-16,-43l-34,-35l-16,-54l-22,-35l-9,-59l-65,-11l-32,-29l-39,5l-47,-27z"/>
-    <!-- South America -->
-    <path d="M660,710l37,-44l21,-58l54,-41l30,-27l43,-11l33,23l35,73l22,70l-4,65l-38,60l-30,18l-37,2l-34,-44l-53,-58z"/>
-    <!-- Europe -->
-    <path d="M1080,125l42,2l25,11l9,38l51,7l30,18l14,36l38,2l12,21l-1,17l-20,22l-27,6l-47,-6l-16,-12l-45,-9l-18,-27z"/>
-    <!-- Africa -->
-    <path d="M1160,274l44,21l23,43l39,44l12,54l2,51l17,26l13,44l-27,22l-43,1l-49,-32l-37,-9l-35,-38l-24,-41l3,-55l18,-31z"/>
-    <!-- Asia -->
-    <path d="M1400,97l61,26l47,35l75,38l83,42l58,64l22,92l-33,44l-43,71l-52,18l-64,-6l-57,-37l-38,-79l-37,-57l-31,-44l4,-45l-35,-33z"/>
-    <!-- Australia -->
-    <path d="M1800,737l72,26l26,28l-4,36l-41,19l-55,3l-39,-22l-25,-33l6,-35l36,-15z"/>
-    <!-- Greenland -->
-    <path d="M624,58l47,-9l41,1l27,22l-5,21l-26,18l-53,9l-24,-15l-7,-29z"/>
-    <!-- Antarctica (stylized) -->
-    <path d="M0,980l2000,21l-15,0l-800,-18l-900,-4z"/>
-  </g>
+<svg width="900" height="450" viewBox="0 0 900 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .country-group {
+        opacity: 0;
+        stroke-width: 2;
+    }
+    .animate-group {
+        animation: fade-glow-outline 7s linear forwards;
+    }
+    @keyframes fade-glow-outline {
+        0% { opacity: 0; filter: none; stroke: #888; }
+        10% { opacity: 1; filter: drop-shadow(0 0 6px #ffe066); stroke: #f2ae1c; }
+        30% { opacity: 1; filter: drop-shadow(0 0 10px #ffd700); stroke: #ff8800; }
+        60% { opacity: 1; filter: drop-shadow(0 0 6px #ffe066); stroke: #f2ae1c; }
+        90% { opacity: 1; filter: none; stroke: #888; }
+        100% { opacity: 0; filter: none; stroke: #888; }
+    }
+</style>
+<rect width="900" height="450" fill="#e3f6fc"/>
+<!-- World Map Outline (simplified) -->
+<path d="M110 270 C 240 150, 400 110, 800 320" stroke="#79a6d2" stroke-width="4" fill="none"/>
+<!-- Countries will be placed in approximate positions -->
+<g class="country-group animate-group" style="animation-delay:0s">
+<g title="USA"><ellipse cx="220" cy="210" rx="55" ry="35" fill="#3f79c7" /></g>
+<g title="Canada"><ellipse cx="220" cy="150" rx="65" ry="23" fill="#5ba4e8" /></g>
+</g>
+<g class="country-group animate-group" style="animation-delay:7s">
+<g title="UK"><ellipse cx="470" cy="115" rx="18" ry="10" fill="#b4ffe3" /></g>
+<g title="Germany"><ellipse cx="510" cy="135" rx="17" ry="10" fill="#f2e279" /></g>
+<g title="France"><ellipse cx="480" cy="148" rx="17" ry="10" fill="#ffb4b4" /></g>
+</g>
+<g class="country-group animate-group" style="animation-delay:14s">
+<g title="India"><ellipse cx="670" cy="255" rx="27" ry="15" fill="#ffd180" /></g>
+<g title="Singapore"><ellipse cx="795" cy="300" rx="6" ry="3" fill="#f68080" /></g>
+<g title="Japan"><ellipse cx="870" cy="180" rx="8" ry="10" fill="#73e2be" /></g>
+</g>
+<g class="country-group animate-group" style="animation-delay:21s">
+<g title="UAE"><ellipse cx="635" cy="200" rx="9" ry="5" fill="#e8cbc0" /></g>
+<g title="Saudi Arabia"><ellipse cx="610" cy="235" rx="35" ry="14" fill="#dfd344" /></g>
+</g>
+<g class="country-group animate-group" style="animation-delay:28s">
+<g title="South Africa"><ellipse cx="510" cy="390" rx="24" ry="13" fill="#a3f1ee" /></g>
+<g title="Nigeria"><ellipse cx="420" cy="290" rx="19" ry="12" fill="#b4ffb9" /></g>
+</g>
 </svg>

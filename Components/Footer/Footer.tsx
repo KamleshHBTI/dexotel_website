@@ -1,58 +1,85 @@
 "use client";
 import React from "react";
-import FooterBottom from "../Footer/FooterBottom";
+import Link from 'next/link';
+import FooterBottom from "./FooterBottom";
+import Newsletter from "../Newsletter/Newsletter";
+import SocialLinks from "../SocialLinks/SocialLinks";
+import { MAIN_NAVIGATION, LEGAL_LINKS, CONTACT_INFO } from "../../constants/navigation";
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <footer className="bg-gray-50">
       <div className="outer-container shadow-top">
-        <div className="container mx-auto py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Accept Payments Section */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Accept Payments</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>Payment Gateway</li>
-                <li>Subscription</li>
-                <li>Native OTP</li>
-                <li>International Payments</li>
-              </ul>
+        <div className="container mx-auto py-16 px-4">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Company Info & Contact */}
+            <div className="col-span-1 lg:col-span-1">
+              <div className="mb-8">
+                <h3 className="text-xl font-bold mb-4">Dexotel</h3>
+                <p className="text-gray-600 mb-4">
+                  Empowering businesses with seamless payment solutions and innovative financial technology.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-3">Contact Us</h4>
+                <div className="text-gray-600 space-y-2">
+                  <p>{CONTACT_INFO.email}</p>
+                  <p>{CONTACT_INFO.phone}</p>
+                  <p className="text-sm">{CONTACT_INFO.address}</p>
+                </div>
+              </div>
             </div>
 
-            {/* Other Products Section */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Other Products</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>PayU Connect</li>
-                <li>QR</li>
-                <li>POS</li>
-                <li>Transact</li>
-              </ul>
+            {/* Navigation Links */}
+            <div className="col-span-1 lg:col-span-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                {Object.values(MAIN_NAVIGATION).map((section) => (
+                  <div key={section.title}>
+                    <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+                    <ul className="space-y-2">
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <Link 
+                            href={link.href}
+                            className="text-gray-600 hover:text-blue-600 transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Company Section */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Partners</li>
-                <li>Startup Program</li>
-              </ul>
+            {/* Newsletter & Social */}
+            <div className="col-span-1 lg:col-span-1 space-y-8">
+              <Newsletter />
+              <SocialLinks />
             </div>
+          </div>
 
-            {/* Description Section */}
-            <div>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, sapien vel aliquet vehicula, felis risus tincidunt sapien, eget suscipit felis ligula at metus.
-              </p>
+          {/* Legal Links */}
+          <div className="border-t border-gray-200 pt-8">
+            <div className="flex flex-wrap justify-center gap-6">
+              {LEGAL_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
       </div>
       <FooterBottom />
-    </>
+    </footer>
   );
 };
 

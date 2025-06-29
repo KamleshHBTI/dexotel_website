@@ -1,0 +1,12 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <radialGradient id="bg-energy" cx="53%" cy="43%" r="62%">
+     <stop offset="0%" stop-color="#ffc107" stop-opacity="0.13" />
+     <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+   </radialGradient>
+</defs>
+<ellipse cx="200" cy="210" rx="124" ry="68" fill="url(#bg-energy)" />
+<polygon id="bolt" points="205,160 185,220 210,220 190,270 240,190 215,190 235,160" fill="#ffeb3b" stroke="#ffb300" stroke-width="3">
+  <animate attributeName="opacity" values="1;0.7;1" dur="1.2s" repeatCount="indefinite" />
+</polygon>
+</svg>
