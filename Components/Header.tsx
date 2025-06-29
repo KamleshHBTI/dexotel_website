@@ -32,7 +32,6 @@ const navigationItems: NavItem[] = [
   { label: "Services", href: "/Services" },
   { label: "Industries", href: "/Industries" },
   { label: "Company", href: "/Company" },
-  { label: "Partners", href: "/Partners" },
   { label: "Career", href: "/Career" },
   { label: "Blogs", href: "/Blogs" },
 ];

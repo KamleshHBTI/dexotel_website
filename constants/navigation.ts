@@ -30,7 +30,6 @@ export const MAIN_NAVIGATION = {
     links: [
       { label: 'About Us', href: '/company/about' },
       { label: 'Careers', href: '/careers' },
-      { label: 'Partners', href: '/partners' },
       { label: 'Blog', href: '/blog' },
     ]
   }

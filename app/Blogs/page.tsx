@@ -10,7 +10,7 @@ import HeroIllustration from "../Components/HeroIllustration";
 
 const Blogs = () => {
   return (
-    <SectionTransition>
+    <div>
       <HeroSection
         title="Insights & Updates"
         subtitle="Stay informed with our latest articles, industry insights, and expert perspectives on communication technology."
@@ -31,7 +31,7 @@ const Blogs = () => {
         </motion.h1>
         <BlogSection />
       </div>
-    </SectionTransition>
+    </div>
   );
 };
 

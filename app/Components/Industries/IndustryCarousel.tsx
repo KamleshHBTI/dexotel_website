@@ -11,6 +11,7 @@ interface IndustryCarouselProps {
 const IndustryCarousel: React.FC<IndustryCarouselProps> = ({ industries }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -128,8 +129,12 @@ const IndustryCarousel: React.FC<IndustryCarouselProps> = ({ industries }) => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                <Button variant="primary" size="lg">
-                  Consult our experts
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Consult our {industries[currentIndex].name} experts
                 </Button>
               </motion.div>
             </div>

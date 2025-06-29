@@ -71,7 +71,7 @@ const OpenPositions = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Open Positions</h2>
+          <h2 className="text-4xl font-bold mb-4 text-theme">Open Positions</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Join our team and help shape the future of business communication
           </p>
@@ -129,7 +129,7 @@ const OpenPositions = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow border-theme border-2 border-solid border-theme-600 hover:border-theme-700 "
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
@@ -152,7 +152,7 @@ const OpenPositions = () => {
                   </p>
                 </div>
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                <button className="w-full bg-theme-600 hover:bg-theme-900 text-white py-2 px-4 rounded-lg transition-colors">
                   Apply Now
                 </button>
               </motion.div>
