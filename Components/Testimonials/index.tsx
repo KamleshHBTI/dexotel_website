@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Testimonials.module.css';
-import SectionTransition from '../ui/SectionTransition';
 
 const testimonials = [
   {

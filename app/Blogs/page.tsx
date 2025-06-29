@@ -3,8 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import BlogSection from '@/Components/Blogs/BlogSection';
-import SectionTransition from '@/Components/ui/SectionTransition';
-import GreenOverlay from '@/Components/ui/GreenOverlay';
 import HeroSection from "../Components/HeroSection";
 import HeroIllustration from "../Components/HeroIllustration";
 
@@ -19,7 +17,7 @@ const Blogs = () => {
         illustration={<HeroIllustration />}
         variant="tertiary"
       />
-      <div className="theme-container">
+      <div className="theme-container theme-section theme-section-bg">
         <motion.h1
           className="theme-heading text-center"
           initial={{ opacity: 0, y: -20 }}

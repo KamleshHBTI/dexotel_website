@@ -47,7 +47,7 @@ const BenefitsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Why Join Us</h2>
+          <h2 className="text-4xl font-bold mb-4 text-theme">Why Join Us</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We offer more than just a job. Join us for a fulfilling career with amazing benefits and opportunities.
           </p>

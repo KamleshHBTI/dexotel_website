@@ -6,6 +6,7 @@ import { services } from '@/data/services';
 import ContactForm from '@/Components/Contact/ContactSection';
 import ServiceDetails from '@/Components/Services/ServiceDetails';
 import { Metadata } from 'next';
+import { Divide } from 'lucide-react';
 
 interface ServicePageProps {
   params: Promise<{
@@ -30,21 +31,7 @@ const ServicePage: React.FC<ServicePageProps> = async ({ params }) => {
   }
 
   return (
-    <>
       <ServiceDetails service={service} services={services} />
-      <section className="py-16 bg-theme-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center text-theme">
-              Get Started with {service.title}
-            </h2>
-            <div className="theme-card bg-white">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
   );
 };
 

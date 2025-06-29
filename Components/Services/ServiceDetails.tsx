@@ -175,9 +175,6 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service, services }) =>
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <ContactSection />
     </div>
   );
 };
