@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Industry } from '@/app/Industries/data';
+import { Industry } from '@/app/industries/data';
 import { ArrowRight } from 'lucide-react';
 
 interface IndustryGridProps {
@@ -47,7 +47,7 @@ const IndustryGrid: React.FC<IndustryGridProps> = ({ industries }) => {
           <h3 className="text-xl font-bold mb-3 text-[#2b7360]">{industry.name}</h3>
           <p className="text-gray-600 mb-4">{industry.description}</p>
           <Link 
-            href={`/Industries/${industry.id}`}
+            href={`/industries/${industry.id}`}
             className="inline-flex items-center text-[#2b7360] hover:text-[#1a4d40] transition-colors"
           >
             Learn More <ArrowRight className="ml-2 h-4 w-4" />

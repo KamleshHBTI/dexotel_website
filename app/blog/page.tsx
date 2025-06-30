@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import BlogSection from '@/Components/Blogs/BlogSection';
+import BlogSection from '@/components/blog/BlogSection';
 import HeroSection from "../Components/HeroSection";
 import HeroIllustration from "../Components/HeroIllustration";
 
-const Blogs = () => {
+const Blog = () => {
   return (
     <div>
       <HeroSection
@@ -33,4 +33,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default Blog;

@@ -3,34 +3,34 @@ export const MAIN_NAVIGATION = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Mobile App Development', href: '/Services/mobile-app-development' },
-      { label: 'Software Development', href: '/Services/software-development' },
-      { label: 'Digital Transformation', href: '/Services/digital-transformation' },
-      { label: 'Ideation And Design Strategy', href: '/Services/ideation-and-design' },
-      { label: 'IT Consulting', href: '/Services/it-consulting' },
-      { label: 'DevOps', href: '/Services/devops' },
-      { label: 'Cloud Managed Services', href: '/Services/cloud-managed-services' },
-      { label: 'Salesforce Services', href: '/Services/salesforce-services' },
+      { label: 'Mobile App Development', href: '/services/mobile-app-development' },
+      { label: 'Software Development', href: '/services/software-development' },
+      { label: 'Digital Transformation', href: '/services/digital-transformation' },
+      { label: 'Ideation And Design Strategy', href: '/services/ideation-and-design' },
+      { label: 'IT Consulting', href: '/services/it-consulting' },
+      { label: 'DevOps', href: '/services/devops' },
+      { label: 'Cloud Managed Services', href: '/services/cloud-managed-services' },
+      { label: 'Salesforce Services', href: '/services/salesforce-services' },
     ]
   },
   industries: {
     title: 'Industries',
     links: [
-      { label: 'Healthcare', href: '/Industries/healthcare' },
-      { label: 'Education', href: '/Industries/education' },
-      { label: 'Fintech', href: '/Industries/fintech' },
-      { label: 'E-commerce', href: '/Industries/ecommerce' },
-      { label: 'Logistics', href: '/Industries/logistics' },
-      { label: 'Real Estate', href: '/Industries/real-estate' },
-      { label: 'Hospitality', href: '/Industries/hospitality' },
-      { label: 'Insurance', href: '/Industries/insurance' },
-      { label: 'Manufacturing', href: '/Industries/manufacturing' },
-      { label: 'Retail', href: '/Industries/retail' },
-      { label: 'technology', href: '/Industries/technology' },
-      { label: 'Energy', href: '/Industries/energy' },
-      { label: 'Travel', href: '/Industries/travel' },
-      { label: 'Telecom', href: '/Industries/telecom' },
-      { label: 'Automotive', href: '/Industries/automotive' },
+      { label: 'Healthcare', href: '/industries/healthcare' },
+      { label: 'Education', href: '/industries/education' },
+      { label: 'Fintech', href: '/industries/fintech' },
+      { label: 'E-commerce', href: '/industries/ecommerce' },
+      { label: 'Logistics', href: '/industries/logistics' },
+      { label: 'Real Estate', href: '/industries/real-estate' },
+      { label: 'Hospitality', href: '/industries/hospitality' },
+      { label: 'Insurance', href: '/industries/insurance' },
+      { label: 'Manufacturing', href: '/industries/manufacturing' },
+      { label: 'Retail', href: '/industries/retail' },
+      { label: 'Technology', href: '/industries/technology' },
+      { label: 'Energy', href: '/industries/energy' },
+      { label: 'Travel', href: '/industries/travel' },
+      { label: 'Telecom', href: '/industries/telecom' },
+      { label: 'Automotive', href: '/industries/automotive' },
       
       
     ]
@@ -45,9 +45,9 @@ export const MAIN_NAVIGATION = {
   company: {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '/Company' },
-      { label: 'Career', href: '/Career' },
-      { label: 'Blogs', href: '/Blogs' },
+      { label: 'About Us', href: '/company' },
+      { label: 'Career', href: '/career' },
+      { label: 'Blog', href: '/blog' },
     ]
   }
 };

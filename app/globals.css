@@ -131,3 +131,153 @@ body {
 .timeline-line {
   @apply absolute h-full w-0.5 bg-theme bg-opacity-20 left-2 -z-10;
 }
+
+/* Rich Text Editor Styles */
+.ql-editor {
+  min-height: 200px;
+  font-family: inherit;
+}
+
+.dark .ql-toolbar {
+  background-color: #1f2937;
+  border-color: #374151 !important;
+}
+
+.dark .ql-container {
+  background-color: #1f2937;
+  border-color: #374151 !important;
+}
+
+.dark .ql-editor {
+  color: #e5e7eb;
+}
+
+.dark .ql-stroke {
+  stroke: #e5e7eb !important;
+}
+
+.dark .ql-fill {
+  fill: #e5e7eb !important;
+}
+
+.dark .ql-picker {
+  color: #e5e7eb !important;
+}
+
+.dark .ql-picker-options {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  article {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  p, blockquote, ul, ol {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark Mode Transitions */
+.dark-mode-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Blog Content Typography */
+.blog-content {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.blog-content h1 {
+  font-size: 2.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-content h2 {
+  font-size: 1.875rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+}
+
+.blog-content ul, .blog-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #2b7360;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.dark .blog-content blockquote {
+  color: #9ca3af;
+}
+
+/* Social Share Buttons */
+.social-share-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.social-share-button:hover {
+  transform: translateY(-1px);
+}
+
+.social-share-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #2b7360;
+  transform-origin: 0 50%;
+  z-index: 50;
+}

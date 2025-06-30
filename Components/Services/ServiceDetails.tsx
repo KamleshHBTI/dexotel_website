@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Service } from './ServicesGrid';
 import { serviceDetails } from '@/data/service-details';
 import ServiceHero from './ServiceHero';
-import ContactSection from '../Contact/ContactSection';
+import ContactSection from '../contact/ContactSection';
 
 interface ServiceDetailsProps {
   service: Service;

@@ -12,7 +12,7 @@ const SocialLinks = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-600 hover:text-white transition-colors"
             aria-label={`Follow us on ${link.platform}`}
           >
             <span className={`w-6 h-6 inline-block`}>

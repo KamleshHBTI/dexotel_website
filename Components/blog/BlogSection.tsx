@@ -5,6 +5,7 @@ import ArticleGrid from './ArticleGrid/ArticleGrid';
 import EngagementSection from './Engagement/EngagementSection';
 import { BlogPost, TopicChip, SearchResult } from './types';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 // Mock data - Replace with actual API calls
 const mockTopics: TopicChip[] = [
@@ -106,6 +107,17 @@ const BlogSection: React.FC = () => {
 
   return (
     <div className="space-y-12">
+      {/* <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-[#2b7360]">Blog Posts</h1>
+          <Link
+            href="/blog/new"
+            className="px-4 py-2 bg-[#2b7360] text-white rounded-lg font-medium hover:bg-[#2b7360]/90 transition-colors"
+          >
+            Create New Post
+          </Link>
+        </div>
+      </div> */}
       <FeaturedHero featuredPosts={featuredPosts} />
       <DiscoveryBar
         topics={mockTopics}

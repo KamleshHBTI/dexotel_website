@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Industry } from '@/app/Industries/data';
-import Button from '@/Components/DesignSystem/Button';
+import { Industry } from '@/app/industries/data';
+import Button from '@/components/DesignSystem/Button';
 import Image from 'next/image';
 
 interface IndustryCarouselProps {

@@ -1,13 +1,13 @@
 "use client";
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import FocusIndustries from "@/Components/Services/FocusIndustries";
-import HeroSection from "@/Components/HeroSection";
-import Features from "@/Components/Features";
-import Testimonials from "@/Components/Testimonials";
-import { ContactFormData, ContactFormErrors } from './LetsTalk/types';
-import Header from './LetsTalk/components/Header';
-import ServicesSection from './Components/Services/ServicesSection';
-import ContactPageContent from '@/Components/Contact/ContactPageContent';
+import FocusIndustries from "@/components/services/FocusIndustries";
+import HeroSection from "@/components/heroSection";
+import Features from "@/components/features";
+import Testimonials from "@/components/Testimonials";
+import { ContactFormData, ContactFormErrors } from './letsTalk/types';
+import Header from './letsTalk/components/Header';
+import ServicesSection from './Components/services/ServicesSection';
+import ContactPageContent from '@/components/contact/ContactPageContent';
 
 
 const Page = () => {

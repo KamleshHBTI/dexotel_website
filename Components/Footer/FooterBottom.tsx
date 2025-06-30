@@ -23,9 +23,9 @@ const FooterBottom = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-4">
+    <div className="bg-black py-4">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white-600">
           <div>
             © {currentYear} Dexotel. All rights reserved.
           </div>

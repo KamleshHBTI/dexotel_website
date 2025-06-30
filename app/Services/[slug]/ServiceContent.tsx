@@ -2,9 +2,9 @@
 
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Service } from '@/Components/Services/ServicesGrid';
-import { ContactFormData, ContactFormErrors } from '@/app/LetsTalk/types';
-import ContactForm from '@/app/LetsTalk/components/ContactForm';
+import { Service } from '@/components/services/ServicesGrid';
+import { ContactFormData, ContactFormErrors } from '@/app/letsTalk/types';
+import ContactForm from '@/app/letsTalk/components/ContactForm';
 
 interface ServiceContentProps {
   service: Service;

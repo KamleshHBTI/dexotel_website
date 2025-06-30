@@ -1,10 +1,10 @@
 "use client";
 
 import React from 'react';
-import { Service } from '@/Components/Services/ServicesGrid';
+import { Service } from '@/components/services/ServicesGrid';
 import { services } from '@/data/services';
-import ContactForm from '@/Components/Contact/ContactSection';
-import ServiceDetails from '@/Components/Services/ServiceDetails';
+import ContactForm from '@/components/contact/ContactSection';
+import ServiceDetails from '@/components/services/ServiceDetails';
 import { Metadata } from 'next';
 import { Divide } from 'lucide-react';
 

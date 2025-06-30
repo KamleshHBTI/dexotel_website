@@ -2,12 +2,12 @@
 
 import React, { FormEvent, useState } from 'react';
 import { ChangeEvent } from 'react';
-import { ContactFormData, ContactFormErrors } from '../LetsTalk/types';
+import { ContactFormData, ContactFormErrors } from '../letsTalk/types';
 import HeroIllustration from "../Components/HeroIllustration";
 import HeroSection from "../Components/HeroSection";
-import ServicesSection from '../Components/Services/ServicesSection';
-import ContactPageContent from '@/Components/Contact/ContactPageContent';
-import Header from '../LetsTalk/components/Header';
+import ServicesSection from '../Components/services/ServicesSection';
+import ContactPageContent from '@/components/contact/ContactPageContent';
+import Header from '../letsTalk/components/Header';
 
 const Services = () => {
   const [formData, setFormData] = useState<ContactFormData>({

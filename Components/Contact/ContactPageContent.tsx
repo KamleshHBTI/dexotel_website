@@ -1,6 +1,6 @@
 import React from "react";
-import ContactBenefits from '@/app/LetsTalk/components/ContactBenefits';    
-import ContactForm from '@/app/LetsTalk/components/ContactForm';
+import ContactBenefits from '@/app/letsTalk/components/ContactBenefits';    
+import ContactForm from '@/app/letsTalk/components/ContactForm';
 import Separator from '@/app/Components/DesignSystem/Separator';    
 
 interface ContactPageContentProps {

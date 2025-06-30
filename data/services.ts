@@ -9,7 +9,7 @@ import {
   Cloud,
   CloudUpload
 } from 'lucide-react';
-import { Service } from '@/Components/Services/ServicesGrid';
+import { Service } from '@/components/services/ServicesGrid';
 
 export const services: Service[] = [
   {

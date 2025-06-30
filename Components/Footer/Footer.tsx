@@ -2,8 +2,8 @@
 import React from "react";
 import Link from 'next/link';
 import FooterBottom from "./FooterBottom";
-import Newsletter from "../Newsletter/Newsletter";
-import SocialLinks from "../SocialLinks/SocialLinks";
+import Newsletter from "../newsletter/Newsletter";
+import SocialLinks from "../socialLinks/SocialLinks";
 import { MAIN_NAVIGATION, LEGAL_LINKS, CONTACT_INFO } from "../../constants/navigation";
 import "./footer.css";
 
@@ -40,10 +40,11 @@ const Footer = () => {
                     <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
                     <ul className="space-y-2 mb-8">
                       {section.links.map((link) => (
-                        <li key={link.href}>
+                        <li key={link.href}
+                        className="text-gray-600 hover:text-text transition-colors">
                           <Link 
                             href={link.href}
-                            className="text-gray-600 hover:text-blue-600 transition-colors"
+                            className="text-gray-600 hover:text-white transition-colors"
                           >
                             {link.label}
                           </Link>
@@ -69,7 +70,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                  className="text-sm text-gray-600 hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>

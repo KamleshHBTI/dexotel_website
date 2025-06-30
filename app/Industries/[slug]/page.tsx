@@ -3,9 +3,9 @@
 import React from 'react';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { industries } from '../data';
-import { ContactFormData, ContactFormErrors } from '@/app/LetsTalk/types';
-import ContactForm from '@/app/LetsTalk/components/ContactForm';
+import { industries } from '@/app/industries/data';
+import { ContactFormData, ContactFormErrors } from '@/app/letsTalk/types';
+import ContactForm from '@/app/letsTalk/components/ContactForm';
 
 const IndustryDetails = () => {
   const { slug } = useParams();

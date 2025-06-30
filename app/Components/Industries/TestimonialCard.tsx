@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Testimonial } from '@/app/Industries/data';
+import { Testimonial } from '@/app/industries/data';
 
 interface TestimonialCardProps {
   testimonial: Testimonial;

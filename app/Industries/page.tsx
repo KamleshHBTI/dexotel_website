@@ -1,17 +1,17 @@
 'use client';
 
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-import Section from '@/Components/DesignSystem/Section';  
-import IndustryCarousel from '@/app/Components/Industries/IndustryCarousel';
-import IndustryGrid from '@/app/Components/Industries/IndustryGrid';
-import TestimonialCard from '@/app/Components/Industries/TestimonialCard';
-import { industries, testimonials, regions } from './data';
+import Section from '@/components/DesignSystem/Section';  
+import IndustryCarousel from '@/app/Components/industries/IndustryCarousel';
+import IndustryGrid from '@/app/Components/industries/IndustryGrid';
+import TestimonialCard from '@/app/Components/industries/TestimonialCard';
+import { industries, testimonials, regions } from '@/app/industries/data';
 import * as XLSX from 'xlsx';
-import { ContactFormData, ContactFormErrors } from '../LetsTalk/types';
-import ContactBenefits from '../LetsTalk/components/ContactBenefits';
-import ContactForm from '../LetsTalk/components/ContactForm';
-import ContactSection from '@/Components/Contact/ContactSection';
-import Header from '../LetsTalk/components/Header';
+import { ContactFormData, ContactFormErrors } from '../letsTalk/types';
+import ContactBenefits from '../letsTalk/components/ContactBenefits';
+import ContactForm from '../letsTalk/components/ContactForm';
+import ContactSection from '@/components/contact/ContactSection';
+import Header from '../letsTalk/components/Header';
 
 const Industries = () => {
   const [formData, setFormData] = useState<ContactFormData>({

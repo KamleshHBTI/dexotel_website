@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { services } from '@/data/services';
 import { Card } from '../DesignSystem/Card';
-import { ContactFormData, ContactFormErrors } from '../../LetsTalk/types';
+import { ContactFormData, ContactFormErrors } from '../../letsTalk/types';
 
 interface ServicesSectionProps {
   formData: ContactFormData;
@@ -32,7 +32,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = () => {
               description={service.description}
               icon={service.icon}
               link={{
-                href: `/Services/${service.slug}`,
+                href: `/services/${service.slug}`,
                 text: 'Learn more'
               }}
             />

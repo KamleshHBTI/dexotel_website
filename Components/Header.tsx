@@ -28,13 +28,48 @@ const defaultLogo = {
 };
 
 const navigationItems: NavItem[] = [
-  { label: "Let's Talk", href: "/LetsTalk" },
-  { label: "Services", href: "/Services" },
-  { label: "Industries", href: "/Industries" },
-  { label: "Company", href: "/Company" },
-  { label: "Career", href: "/Career" },
-  { label: "Blogs", href: "/Blogs" },
+  { label: "Let's Talk", href: "/letsTalk" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Company", href: "/company" },
+  { label: "Career", href: "/career" },
+  { label: "Blog", href: "/blog" },
 ];
+
+// Blinking component for Let's Talk
+const BlinkingText: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOpacity(prev => prev === 1 ? 0 : 1);
+    }, 600);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span>
+      <span 
+        style={{ 
+          opacity: opacity,
+          transition: 'opacity 0.3s ease-in-out'
+        }}
+      >
+        [ 
+      </span>
+      {children}
+      <span 
+        style={{ 
+          opacity: opacity,
+          transition: 'opacity 0.3s ease-in-out'
+        }}
+      >
+         ]
+      </span>
+    </span>
+  );
+};
 
 export const Header: React.FC<HeaderProps> = ({ 
   logo = defaultLogo,
@@ -94,10 +129,14 @@ export const Header: React.FC<HeaderProps> = ({
                     after:scale-x-0 after:transition-transform after:duration-300
                     hover:after:scale-x-100
                     ${pathname === item.href ? 'after:scale-x-100' : ''}
-                    focus:outline-none focus:ring-2 focus:ring-[#2b7360] rounded-lg
+                    focus:outline-none
                   `}
                 >
-                  {item.label}
+                  {item.label === "Let's Talk" ? (
+                    <BlinkingText>{item.label}</BlinkingText>
+                  ) : (
+                    item.label
+                  )}
                 </Link>
               ))}
             </nav>
@@ -132,10 +171,14 @@ export const Header: React.FC<HeaderProps> = ({
                     text-[#2b7360] font-bold p-2 rounded-lg transition-all duration-300
                     hover:bg-[#2b736011]
                     ${pathname === item.href ? 'bg-[#2b736022]' : ''}
-                    focus:outline-none focus:ring-2 focus:ring-[#2b7360]
+                    focus:outline-none
                   `}
                 >
-                  {item.label}
+                  {item.label === "Let's Talk" ? (
+                    <BlinkingText>{item.label}</BlinkingText>
+                  ) : (
+                    item.label
+                  )}
                 </Link>
               ))}
             </nav>

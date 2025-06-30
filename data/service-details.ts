@@ -1,4 +1,4 @@
-import { Service } from '@/Components/Services/ServicesGrid';
+import { Service } from '@/components/services/ServicesGrid';
 import { 
   FaReact, FaMobile, FaSwift, FaJava, FaPython, FaNodeJs, FaAngular, FaVuejs,
   FaAws, FaFigma, FaSketch, FaMicrosoft, FaCloud, FaRobot, FaDatabase, FaChartBar,

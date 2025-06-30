@@ -7,12 +7,12 @@ import Culture from './components/Culture'
 import Team from './components/Team'
 import Timeline from './components/Timeline'
 import Values from './components/Values'
-import ContactSection from '@/Components/Contact/ContactSection';
+import ContactSection from '@/components/contact/ContactSection';
 import { useState, ChangeEvent, FormEvent } from 'react';
-import { ContactFormData, ContactFormErrors } from '../LetsTalk/types';
-import Header from '../LetsTalk/components/Header';
-import ContactBenefits from '../LetsTalk/components/ContactBenefits';
-import ContactForm from '../LetsTalk/components/ContactForm';
+import { ContactFormData, ContactFormErrors } from '../letsTalk/types';
+import Header from '../letsTalk/components/Header';
+import ContactBenefits from '../letsTalk/components/ContactBenefits';
+import ContactForm from '../letsTalk/components/ContactForm';
 
 const Company = () => {
   const [formData, setFormData] = useState<ContactFormData>({

@@ -1,11 +1,11 @@
 'use client';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import * as XLSX from 'xlsx';
-import { ContactFormData, ContactFormErrors } from './types';
-import Header from './components/Header';
-import ContactBenefits from './components/ContactBenefits';
-import ContactForm from './components/ContactForm';
-import ContactSection from '@/Components/Contact/ContactSection';
+import { ContactFormData, ContactFormErrors } from '@/app/letsTalk/types';
+import Header from '@/app/letsTalk/components/Header';
+import ContactBenefits from '@/app/letsTalk/components/ContactBenefits';
+import ContactForm from '@/app/letsTalk/components/ContactForm';
+import ContactSection from '@/components/contact/ContactSection';
 
 const LetsTalk = () => {
   const [formData, setFormData] = useState<ContactFormData>({
